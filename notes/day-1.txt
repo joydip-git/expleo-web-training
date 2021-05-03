@@ -1,0 +1,18 @@
+Editor: Visual Studio Code
+MongoDB:
+Node JS
+
+HTML: describes the structure of your web page (tags/elements) NOUN
+
+CSS: Cascading style sheet-> to provide styles for the element son the web page ADJECTIVE
+
+JavaScript: by writing we decide the behavior of the elements (click on the button, something happens) VERB
+
+*.htm/*.html
+
+style-attribute-name:value
+
+background-color:blue
+font-family:'Segoe UI'
+
+Ctrl+k,C
