@@ -1,0 +1,10 @@
+var fs = require('fs')
+console.log('hello...')
+
+var x = 10;
+var y = 20;
+var z = x + y;
+console.log(z)
+
+var data = JSON.parse(fs.readFileSync('../data/empdata.json'));
+console.log(data)

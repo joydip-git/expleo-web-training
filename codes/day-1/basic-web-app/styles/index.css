@@ -1,5 +1,9 @@
+/*
+  element selector
+*/
 h1,
 button {
   background-color: burlywood;
   font-family: "Segoe UI";
 }
+

@@ -16,3 +16,60 @@ background-color:blue
 font-family:'Segoe UI'
 
 Ctrl+k,C
+
+chrome web browser (chromekit browers - opera): JS engine --> v8 --> C++
+
+Ryan Dahl: *.js -- (Node.exe) --> V8 --> execute
+
+#include<stdio.h>
+#include<iostream.h>
+
+using System;
+
+imports <package-name>
+
+Client-side coding:
+
+Server-side (desktop) coding:
+
+
+/**
+ * dynamic programming language
+ */
+
+//ECMAScript (ECMA-262)
+
+//client-side coding: Angular, React, Vue
+//server-side coding
+
+
+data types
+statements
+operators
+
+types of data:
+	number
+	string
+	boolean
+	object
+
+operators:
+	arirtmatic: +, -, *, /, %, ++, --
+	comparison: ==, !=, >, <, >=, <=
+	logical: ||, &&, !
+	assignment:=, +=, -=, *=, /=, %=
+	conditional: ?:
+	bitwise: & (bitwise AND), | (Bitwise OR), ^ (Bitwise XOR), ~ (Bitwise Not), >> (Right Shift), << (Bitwise left shift)
+
+
+array:
+
+object:
+	
+
+
+
+
+
+
+
