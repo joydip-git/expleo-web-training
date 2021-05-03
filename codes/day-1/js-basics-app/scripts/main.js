@@ -117,7 +117,7 @@ var anilObj = {
     id: 1,
     salary: 2000
 }
-*/
+
 //var people = [joyObj, anilObj];
 var people = [{
     name: 'joydip',
@@ -150,4 +150,4 @@ for (var index = 0; index < resultant.length; index++) {
     var info = p.print();
     console.log(info)
 }
-
+*/
