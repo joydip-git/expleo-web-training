@@ -31,12 +31,14 @@ var people = [{
     salary: 1000
 }, {
     name: 'sunil',
-    id: 2,
+    id: 3,
     salary: 3000
 }]
 var copyOfPeople = [{ ...people[0] }, { ...people[1] }, { ...people[2] }]
 sortInAscendingOrder(copyOfPeople, function (person1, person2) {
-    return person1.salary - person2.salary;
+    //return person1.name[0] > person2.name[0];
+    //return person1.salary - person2.salary;
+    return person1.id > person2.id;
 })
 
 console.log(copyOfPeople)
@@ -85,3 +87,5 @@ console.log(copyOfPeople)
 // var copyOfAnil = { ...people[1] }
 // var copyOfPeople = [copyOfJoydip, copyOfAnil];
 */
+
+
