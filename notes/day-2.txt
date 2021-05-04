@@ -1,0 +1,31 @@
+1. data types and var keyword
+2. operators
+3. statements (for..in loop not covered)
+4. array
+5. object {data-prop-name:value, fn-prop-name:function(){} }
+6. callback
+7. array built-in methods (which uses callback) such as: filter, sort (map not discussed)
+8. copying array and other objects
+9. arrow operator
+
+var add = function(a, b){
+	clg(a+b);
+}
+
+var add = (a,b)=>clg(a+b);
+var add = (a,b)=>{
+   clg(a+b);
+}
+
+add(10,20);
+
+var arr = [];
+var copy = [...arr];
+
+var obj = {name:'joy'};
+var newObjByCopying = {...obj, salary:2000};
+
+10. JS execution cycle
+11. var hoisting (let, const)
+12. function
+13. objects
