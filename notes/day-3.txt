@@ -1,0 +1,15 @@
+data types
+	- number (10, 12.34)
+	- boolean (true/false)
+	- string ('joydip'/"joydip")
+	- array ([]/new Array())
+	- object ({})
+
+	- function
+	- undefined
+
+
+0,1
+
+	0 - 0
+	1 - 1
