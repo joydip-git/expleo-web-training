@@ -23,10 +23,10 @@ var person = {
     salary: 2000,
 
     print: function () {
+        //console.log(this == global)
+        //console.log(this == window)
         console.log(this)
-        var res = this.pname + ', ' + this.salary;
-        console.log(res)
-        return res;
+        return this.pname + ', ' + this.salary;
     }
 }
 
@@ -41,6 +41,8 @@ var printRef = person['print'];
 // console.log(printRef)
 // console.log(typeof printRef)
 var boundRef = printRef.bind(person);
+console.log(printRef)
+console.log(boundRef)
 //var info = printRef();
 var info = boundRef();
 console.log(info)
