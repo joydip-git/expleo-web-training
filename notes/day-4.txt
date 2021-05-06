@@ -1,0 +1,7 @@
+Execution Context steps:
+	- 1st stage => compilation/creation stage
+	- 2nd Stage => execution stage
+
+EC:
+	a. GEC
+	b. FEC
