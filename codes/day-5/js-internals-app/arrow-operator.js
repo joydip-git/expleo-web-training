@@ -28,9 +28,11 @@ function fnA() {
         this.q = 400;
         console.log(this.m + this.q)
     }
-    fnD();
+    return fnD;
 }
 var obj = { x: 1 };
 //??.fnA()
-(fnA.bind(obj))(); //obj<--fnA()
+var boundFnA = fnA.bind(obj);
+var fnDRef = boundFnA(); //obj<--fnA()
+fnDRef();
 //this-->window
