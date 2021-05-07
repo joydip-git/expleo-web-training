@@ -1,0 +1,16 @@
+1. variable hoisting
+2. function hoisting
+3. scope
+4. execution context
+5. closure
+
+
+execution of
+
+	 - function
+		a. owned by some object
+		b. context object (a=200)
+
+	 - global code
+		a. owned by some object
+		b. context object (a=100)
