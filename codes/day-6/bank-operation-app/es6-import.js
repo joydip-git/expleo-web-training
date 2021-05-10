@@ -1,0 +1,1 @@
+import { add, multiply } from './es6-export'

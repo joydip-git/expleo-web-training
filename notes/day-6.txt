@@ -1,0 +1,77 @@
+topics discussed or started:
+---------------------------------------------
+js Basics
+JS internals:
+Execution Context Object [variableObject, this, scopes]
+variable and function hoisting
+bind() method
+arrow function
+objects:
+	object literal syntax and
+	constructor function syntax
+
+prototype-based programming
+
+JS dynamic programming language:
+	- it is no longer interpreted, rather compiled (during runtime - runtime compilation)
+
+
+Compilations:
+---------------------------------
+Just-in-Time (JIT)
+Ahead-of-Time (AOT)
+
+JS execution environment:
+------------------------------------------------
+a. Browser based application (browser runtime)
+b. 
+
+Broswer runtime:
+----------------------------------------------------------------
+JS engine: compiles and execute JS object
+
+Chrome: v8 JS engine
+Firefox: SpiderMonkey
+Safari: JavaScriptCore (Nitro)
+Edge: Chakra (rebuilt using Chroimum and uses V8 engine)
+Opera: V8
+
+Node uses module concept: [, ]
+----------------------------------------
+module: provides a property by the name exports
+
+
+Modules in JS:
+----------------------------------
+a JS file is a module
+
+a. export a module
+-----------------------------
+whichever members of a JS file, that you want to expose (can be called from other files), provide them through a JS object to the exports property
+while doing this use some property names in the JS object to expose the JS file members
+
+b. import a module
+-----------------------------------
+require(<path-without-extension>)
+
+Module formats:
+-------------------------------------------------------
+a. Common JS
+Format: Common JS format of module definition for exporting and importing
+Export: module.exports={propName:member}
+Import: require('path')
+
+b. ES6 module format:
+Export: export
+Import: import {} from 'module-path'
+
+c. AMD (asynchronous module definition) format:
+---------------------------------------------------------
+
+d. UMD (Universal Module definition) format:
+
+
+Node JS module format:
+--------------------------
+default: Common JS
+
