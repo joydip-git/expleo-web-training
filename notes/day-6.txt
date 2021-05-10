@@ -70,8 +70,47 @@ c. AMD (asynchronous module definition) format:
 
 d. UMD (Universal Module definition) format:
 
+e. IIFE(Immediately Invocable Function Expression - IIFE (IIFY))
+
 
 Node JS module format:
 --------------------------
 default: Common JS
+
+Module-loader:
+--------------------------------------------
+Node JS runtime automatically has a module loader which understands the Common JS module format (it understands the require functionalities and resolves the dependencies between the different modules)
+after the dependencies are resolved, then Node js runtime loads the other linked JS files
+and then will supply to the V8 engine for the final compilation and execution
+
+But, in browser environment, there is no module-loader s/w
+so browser will never undestand any modular JS code and can't resolve any dependency
+
+Require JS<--module loader
+	It expects the modules to be written in certian format: AMD, because it is optimized for AMD
+	a. convert your module format in AMD
+	b. write your code AMD
+	c. if you are using Common JS format, then use r.js (Node adapter for Require JS)
+SystemJS
+
+
+conversion of new style JS code to old style JS code (understandable by any browser/node) --> Transpilation (Transpiler)
+Babel -- written using Node js
+
+plugins: package for individual purpose ( => to function(){}, const -> var, let -> var)
+
+preset: collection of plugins
+
+--> creates package.json file with default values
+>npm init --yes 
+>npm i @babel/core @babel/cli @babel/preset-env @babel/plugin-transform-modules-amd --save-dev
+
+@babel/core: core babel transpiler s/w
+@babel/cli: to write comnmands from CLI (command line interface)
+@babel/preset-env: it is a collection some plugins to transform your new JS features back to old JS
+@babel/plugin-transform-modules-amd:  aplugion to convert your ES6 module format to AMD format 
+
+>.\node_modules\.bin\babel <name of folder where source-codes are present> --out-dir <name of folder where output files will be stored>
+
+
 

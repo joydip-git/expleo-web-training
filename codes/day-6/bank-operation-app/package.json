@@ -1,0 +1,20 @@
+{
+  "name": "bank-operation-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "transpile": "babel source --out-dir build"
+  },
+  "keywords": [
+    "babel",
+    "module"
+  ],
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-modules-amd": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
+  }
+}
