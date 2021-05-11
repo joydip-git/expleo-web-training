@@ -1,0 +1,38 @@
+1. every time i change source code, i am manually transpiling
+	- let the transpilation happen automatically every time the source code is modified
+2. i have manually attached the index.js from build folder to index.html file
+	 - if the file name is modified, i have to manually change the script tag
+	 - there will be no script in the HTML file
+	 - when the JS file are transpiled, let them get attached to HTML file automatically
+
+I need:
+	 - to create a consolidated JS file (all transformed JS code in single file)
+	 - the single JS file to be minified
+
+         - a production folder (ex: build) with just my HTML file and single JS file, where the HTML is linked with JS file using script tag
+
+Bundler:
+	Bundling and Minification of my application output code and files
+	webpack, browserify, etc.
+	
+
+3. i am accessing web page using file access mechanism
+	 - use a web server to host my entire application (my app will be running using certain port number during development time)
+		 - production level web server
+		 - development level web server (application development server or app server)
+	webpack development server
+	lite-server
+
+Webpack and webpack development server:
+------------------------------------------------------------------------
+>npm i webpack webpack-cli --save-dev
+>npm i babel-loader html-loader css-loader style-loader --save-dev
+>npm i clean-webpack-plugin html-webpack-plugin --save-dev
+>npm i webpack-dev-server --save-dev
+
+
+
+
+
+         
+	
