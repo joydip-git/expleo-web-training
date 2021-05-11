@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "simple app to understand JS modules",
   "scripts": {
-    "transpile": "babel src --out-dir build"
+    "prod-build": "webpack --mode production",
+    "dev-load": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",

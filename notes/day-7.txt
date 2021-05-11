@@ -30,6 +30,20 @@ Webpack and webpack development server:
 >npm i clean-webpack-plugin html-webpack-plugin --save-dev
 >npm i webpack-dev-server --save-dev
 
+1. entry: main JS file from where webpack will start bundling
+2. output: pass a JS object [filename: <name>, path: 'out']
+3. module: pass a JS object [ rules:[{}, {}, {}, {}]]
+4. plugins: [ new pl1({}), new pl2({})]
+5. devServer:pass a JS object { contentBase:'build', port: 4000}
+6. devtool:'inline-source-map'
+
+rule => { test:js , use:'babel-loader'}
+	{ test:html , use:'html-loader'}
+
+ // "transpile": "babel src --out-dir build"
+"dev-load": "webpack --mode develpoment"
+      
+
 
 
 
