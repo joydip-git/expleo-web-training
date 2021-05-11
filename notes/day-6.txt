@@ -28,7 +28,7 @@ b. Node js runtime
 
 Broswer runtime:
 ----------------------------------------------------------------
-JS engine: compiles and execute JS object
+JS engine: compiles and execute JS code
 
 Chrome: v8 JS engine
 Firefox: SpiderMonkey
@@ -44,6 +44,7 @@ module: provides a property by the name exports
 Modules in JS:
 ----------------------------------
 a JS file is a module
+module object to represent every JS file as module
 
 a. export a module
 -----------------------------
@@ -91,26 +92,49 @@ Require JS<--module loader
 	a. convert your module format in AMD
 	b. write your code AMD
 	c. if you are using Common JS format, then use r.js (Node adapter for Require JS)
+
 SystemJS
 
-
 conversion of new style JS code to old style JS code (understandable by any browser/node) --> Transpilation (Transpiler = Transformer+compiler)
+
 Babel -- written using Node js
-
-plugins: package for individual purpose ( => to function(){}, const -> var, let -> var)
-
-preset: collection of plugins
 
 --> creates package.json file with default values
 >npm init --yes 
 >npm i @babel/core @babel/cli @babel/preset-env @babel/plugin-transform-modules-amd --save-dev
 
-@babel/core: core babel transpiler s/w
-@babel/cli: to write comnmands from CLI (command line interface)
-@babel/preset-env: it is a collection some plugins to transform your new JS features back to old JS
+
+
 @babel/plugin-transform-modules-amd:  aplugion to convert your ES6 module format to AMD format 
 
+
+
+
+>npm init --yes
+>npm init
+
+application dependency:
+	a. development
+	b. runtime
+@babel/core: core babel transpiler s/w
+@babel/cli: to write comnmands from CLI (command line interface)
+
+node_modules: all thrird party packages are part of this folder present at the root of your app directory
+.bin: package executable file
+
+>npm i @babel/core @babel/cli --save-dev
 >.\node_modules\.bin\babel <name of folder where source-codes are present> --out-dir <name of folder where output files will be stored>
+
+plugins: package for individual purpose ( => to function(){}, const -> var, let -> var)
+preset: collection of plugins
+@babel/preset-env: it is a collection some plugins to transform your new JS features back to old JS
+
+>npm i @babel/preset-env --save-dev
+>npm i @babel/plugin-transform-modules-amd --save-dev
+
+babel configuration:
+	a. .babelrc
+	b. babel.config.js
 
 
 

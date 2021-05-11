@@ -1,0 +1,25 @@
+{
+  "name": "browser-calculation-app",
+  "version": "1.0.0",
+  "description": "simple app to understand JS modules",
+  "scripts": {
+    "transpile": "babel src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joydip-git/expleo-web-training/tree/main/codes"
+  },
+  "keywords": [
+    "modules",
+    "requirejs",
+    "babel"
+  ],
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-modules-amd": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
+  }
+}
