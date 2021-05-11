@@ -24,7 +24,7 @@ Ahead-of-Time (AOT)
 JS execution environment:
 ------------------------------------------------
 a. Browser based application (browser runtime)
-b. 
+b. Node js runtime
 
 Broswer runtime:
 ----------------------------------------------------------------
@@ -94,7 +94,7 @@ Require JS<--module loader
 SystemJS
 
 
-conversion of new style JS code to old style JS code (understandable by any browser/node) --> Transpilation (Transpiler)
+conversion of new style JS code to old style JS code (understandable by any browser/node) --> Transpilation (Transpiler = Transformer+compiler)
 Babel -- written using Node js
 
 plugins: package for individual purpose ( => to function(){}, const -> var, let -> var)
