@@ -1,0 +1,29 @@
+1. create a payroll application:
+	a. developer: 
+		value properties:
+		name, id, basicpay, dapay, hrapay, incentivepay, totalsalary
+
+		functional properties:
+
+		calcualteSalary: 
+		calculates total salary based on basicpay, dapay, hrapay, incentivepay and saves the value in value property "totalsalary". does not return anything and does not display.
+
+		show:
+		returns a string with name, id and total salary
+
+	b. hr: 
+		value properties:
+		name, id, basicpay, dapay, gratuitypay, totalsalary
+
+		functional properties:
+		calculates total salary based on basicpay, dapay, hrapay, gratuitypay and saves the value in value property "totalsalary". does not return anything and does not display.
+
+		show:
+		returns a string with name, id and total salary
+
+	c. create an array which can store both types of employee objects
+	d. iterate through the array and display name, id and total salary of every employee
+
+	1. use prototype based programming
+	2. use ES6 features (class, extends and super)
+
