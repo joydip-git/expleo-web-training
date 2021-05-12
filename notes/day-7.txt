@@ -42,7 +42,18 @@ rule => { test:js , use:'babel-loader'}
 
  // "transpile": "babel src --out-dir build"
 "dev-load": "webpack --mode develpoment"
-      
+
+JavaScript:
+------------------------------------
+prototype-based programming
+	 - prototype
+	 - prototype chain
+	 - inheritance in JS using prototype
+	 - changing prototype
+
+call(), apply()
+Promise and asynchronous ops
+closure
 
 
 
