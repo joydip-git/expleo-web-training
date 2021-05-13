@@ -1,0 +1,13 @@
+Node JS: architecture
+JS:
+  promise
+  closure, self executing
+  call() vs apply() vs bind()
+  DOM and BOM
+  AJAX
+
+MongoDB:
+
+Express JS:
+
+RESTFul API server:

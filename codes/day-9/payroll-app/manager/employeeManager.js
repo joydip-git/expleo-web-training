@@ -6,7 +6,6 @@ function addEmployee(emp) {
     const found = employees.find((e) => {
         return e.id === emp.id;
     })
-    console.log(found)
     if (!found) {
         emp.calculateSalary()
         employees.push(emp);
