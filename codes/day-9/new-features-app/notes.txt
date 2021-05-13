@@ -1,0 +1,1 @@
+let, const, spread operator, arrow function, class, extends, super, constructor, import and export, templated string, object destructuring

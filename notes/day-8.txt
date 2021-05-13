@@ -1,0 +1,14 @@
+JavaScript:
+------------------------------------
+prototype-based programming
+	 - prototype
+	 - prototype chain
+	 - inheritance in JS using prototype
+	 - changing prototype
+
+call(), apply()
+Promise and asynchronous ops
+closure
+
+
+
