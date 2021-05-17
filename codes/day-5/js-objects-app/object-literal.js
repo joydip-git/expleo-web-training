@@ -7,12 +7,11 @@ var anilPerson = {
         return this.name + ', ' + this.id + ', ' + this.salary;
     }
 }
-
-
-//var info = anilPerson.printInfo();
 var pInfoFn = anilPerson.printInfo;
 var info = pInfoFn();
 console.log(info)
+
+//var info = anilPerson.printInfo();
 /*
 anilPerson.location = "Bangalore"
 anilPerson.printSalary = () => {
