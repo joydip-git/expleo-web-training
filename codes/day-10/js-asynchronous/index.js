@@ -15,10 +15,11 @@ function main() {
     // }, 0)
     const show = (err, data) => {
         if (err) {
-            console.log(err)
+            fsModule.writeFile('errors.txt', err)
         }
         if (data) {
-            console.log(data.toString())
+            //console.log(data.toString())
+            fsModule.writeFile('results.txt', data)
         }
     }
     // const getData = () => {

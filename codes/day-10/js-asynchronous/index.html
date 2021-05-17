@@ -20,10 +20,12 @@
         const secondButton = document.getElementById('second')
 
         //fetch returns a Promise object
-        // const promiseObj = fetch('http://127.0.0.1:8081/productservice')
-        // // promiseObj
-        // //     .then(data => console.log(data.json()))
-        // //     .catch(err => console.log(err))
+        const promiseObj = fetch('http://127.0.0.1:8081/productservice')
+        promiseObj
+            .then(
+                (data) => console.log(data.json()),
+                (rejectReason) => console.log(rejectReason)
+            )
         // console.log(promiseObj)
 
 

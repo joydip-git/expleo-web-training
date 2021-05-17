@@ -22,3 +22,16 @@ main(){
    add()
    subtract()
 }
+
+Call Stack (JS call stack)
+event-loop
+	browser: DOM APIs (browser call stack)
+	node js: Node APIs (node call stack)
+message queue (a collection of callback functionalities which will be executed when the call stack is completely free)
+
+Job Queue:
+	 if some operation is placed in job queue, id does not wait till all functions in call stack (JS) to be over...the purpose of Job queue is to execute those callback function as soon as possible when the actual async call is over
+
+fetch(url)
+	.then(callback)
+	.catch(callback)
