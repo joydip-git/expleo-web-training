@@ -1,0 +1,24 @@
+Event Loop:
+	asynchronous and has non-blocking I/O
+
+Computers:
+        asynchnronous
+
+Programming languages: thread, asynchronous programming
+	synchronous --> asynchronous
+   
+JS:
+  Single threaded: synchronous
+
+Browser:
+	asynchronity
+
+Node JS:
+	asynchronity
+
+
+c:
+main(){
+   add()
+   subtract()
+}

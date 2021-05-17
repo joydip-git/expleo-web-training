@@ -1,0 +1,21 @@
+###
+GET http://127.0.0.1:8081/productservice
+
+###
+GET http://127.0.0.1:8081/productservice/1
+
+
+###
+POST http://127.0.0.1:8081/productservice/
+Content-Type: application/json
+
+{"productId":100,"productName":"Leaf Rake","productCode":"GDN-0011","releaseDate":"March 19, 2016","description":"Leaf rake with 48-inch wooden handle.","price":19.95,"starRating":4,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"}
+
+###
+PUT http://127.0.0.1:8081/productservice/
+Content-Type: application/json
+
+{"productId":100,"productName":"ABCD","productCode":"GDN-0011","releaseDate":"March 19, 2016","description":"Leaf rake with 48-inch wooden handle.","price":19.95,"starRating":4,"imageUrl":"http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"}
+
+###
+DELETE http://127.0.0.1:8081/productservice/100

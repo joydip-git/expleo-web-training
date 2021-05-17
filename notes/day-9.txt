@@ -1,8 +1,9 @@
 Node JS: architecture
 JS:
-  promise
-  closure, self executing
   call() vs apply() vs bind()
+  promise, asynchronous, Observable
+  
+  closure, self executing  
   DOM and BOM
   AJAX
 
@@ -11,3 +12,6 @@ MongoDB:
 Express JS:
 
 RESTFul API server:
+
+Angular
+

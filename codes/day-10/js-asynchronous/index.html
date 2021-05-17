@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <button id='first'>First</button>
+    <br>
+    <br>
+    <button id='second'>Second</button>
+    <!-- <script src="./index.js"></script> -->
+    <script>
+        console.log('start')
+        const firstButton = document.getElementById('first')
+        const secondButton = document.getElementById('second')
+
+        //fetch returns a Promise object
+        // const promiseObj = fetch('http://127.0.0.1:8081/productservice')
+        // // promiseObj
+        // //     .then(data => console.log(data.json()))
+        // //     .catch(err => console.log(err))
+        // console.log(promiseObj)
+
+
+        firstButton.addEventListener('click', () => console.log('First'))
+        secondButton.addEventListener('click', () => console.log('second'))
+        console.log('stop')
+
+    </script>
+</body>
+
+</html>
