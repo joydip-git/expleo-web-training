@@ -28,3 +28,7 @@ Node JS runtime objects: process, global
 babel src --out-dir build
 
 Express JS:
+
+PWA: service worker
+Fetch
+Battery API
