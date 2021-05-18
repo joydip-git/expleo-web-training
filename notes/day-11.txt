@@ -1,0 +1,30 @@
+1. Node JS:
+	a runtime
+	built upon v8 engine
+	non-blocking I/O
+	asynchronous
+	event-loop mechanism
+	event-based
+
+2. Node architecture
+
+Broswer runtime
+JavaScript asynchronous programming:
+	a. callback
+	b. Promise
+	c. async/await
+
+Node JS: event emitter
+
+3. Node's module system: 
+	Commom JS module format
+	default module-loader for common js format modules
+
+Node JS:
+	accepting user inputs through command line arguments
+
+Node JS modules: fs, path, events, http, os,
+Node JS runtime objects: process, global
+babel src --out-dir build
+
+Express JS:
