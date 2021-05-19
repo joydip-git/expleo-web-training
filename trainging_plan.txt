@@ -1,4 +1,4 @@
-Remaining tooics from JavaScript:
+Remaining topics from JavaScript:
 
 1. Strict Mode (before Angular)
 2. HTML DOM and BOM (before Angular)
@@ -17,6 +17,7 @@ Remaining tooics from JavaScript:
 Remaining Topics: [6 and 1/2 days]
 1. Node and Express JS: [1 ans 1/2 days - 19th -1/2 day and 20th - full day]
 	A. Node JS:
+		async/await keyword
 		Understanding NodeJS console
 		Event Emitter
 		OS Module
