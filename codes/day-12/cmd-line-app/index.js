@@ -1,55 +1,47 @@
-//const { strict } = require("yargs");
 const yargs = require("yargs");
 
-//1. create a ccommand line command
-/*
-yargs
-    .command({
-        command: 'passmesagge',
-        describe: 'pass a message through this command',
-        handler: function () {
-            console.log('got the message');
+yargs.
+    command(
+        'add',
+        'add product related data',
+        createProduct
+        // ({ argv }) => {
+        //     console.log(argv);
+        //     // let product = {
+        //     //     productId: argv.id,
+        //     //     productName: argv.name,
+        //     //     price: argv.price,
+        //     //     description: argv.description
+        //     // }
+        //     let product = new product()
+        // }
+    )
+    .options({
+        'name': {
+            describe: 'pass name of the product',
+            alias: 'n',
+            type: 'string',
+            demandOption: true
+        },
+        'id': {
+            describe: 'pass id of the product',
+            alias: 'i',
+            type: 'number',
+            demandOption: true
+        },
+        'price': {
+            describe: 'pass price of the product',
+            alias: 'p',
+            type: 'number',
+            default: 0
+        },
+        'description': {
+            describe: 'pass description of the product',
+            alias: 'd',
+            type: 'string',
+            default: ''
         }
     })
-    .option('message', {
-        describe: 'should pass message and that should be of type string',
-        type: 'string',
-        alias: 'm'
-    })
-    .demandOption('message', 'message should be used')
-
-// yargs.command({
-//     command: '',
-//     describe: ''
-// })
-// console.log(yargs.argv);
-*/
-const obj = { name: 'anil', id: 100 };
-const { name: pName } = obj;
-
-const doSomething = function ({ argv: argObject }) {
-    console.log('welcome to Command line tool');
-    const obj = {
-        message: argObject.message,
-        title: argObject.title
-    }
-    console.log(obj);
-    // console.log(argObject.message);
-    // console.log(argObject.title);
-}
-
-yargs
-    .command(
-        'passmessage',
-        'command to pass a message',
-        doSomething
-    )
-    .option('message', {
-        describe: 'should pass message and that should be of type string',
-        type: 'string',
-        alias: 'm'
-    })
-    .demandOption('message', 'message should be used')
+// .demandOption(['name', 'id', 'price', 'description'], 'name, id, price and description - all are mandatory to pass')
 
 yargs.parse()
-

@@ -1,0 +1,40 @@
+1. add
+2. delete
+3. update
+4. list
+5. product
+
+command:
+1. 
+add: add a product detail
+handler:
+	input: all args
+	extract data out of the 'argv' property and create an object
+
+options:
+	--name 'dell' --id 101 --price 2000 --desciption '....'
+
+2.
+delete: delete a product
+options:
+	--id 101
+handler:
+      extract the id option value
+
+3. 
+update: update a product
+options:
+	--id 101 --name 'dell'  --price 2000 --desciption '....'
+handler:
+    extract data out of the 'argv' property and create an object
+
+4.
+list
+options: none
+handler:
+
+5.
+ product
+	option: --id (number)
+   
+
