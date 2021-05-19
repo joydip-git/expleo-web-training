@@ -1,0 +1,61 @@
+Remaining tooics from JavaScript:
+
+1. Strict Mode (before Angular)
+2. HTML DOM and BOM (before Angular)
+3. event bubbling and cancelling (before Angular)
+4. DOM Manipulation (before Angular)
+5. Form Validation in JS (before Angular)
+6. Closures & Self-executing Closures (before Angular)
+7. Exceptions and Debugging (anytime)
+8. JSON (with Express and Node)
+9. Cross-domain communication (with Express and Node)
+10. HTML 5 JS API: 
+	Geolocation (during or before angular)
+	Drag and Drop (during or before angular)
+	Local Storage and Session Storage (during or before angular)
+
+Remaining Topics: [6 and 1/2 days]
+1. Node and Express JS: [1 ans 1/2 days - 19th -1/2 day and 20th - full day]
+	A. Node JS:
+		Understanding NodeJS console
+		Event Emitter
+		OS Module
+		Interacting with the Web
+		Making web requests in Node
+		Web server in Node
+
+	additionally:
+        	Little more on process and process.argv
+		yargs package
+		reading and writing inputs and outputs
+
+	B. Express JS:
+		Using Express Framework
+		Starting Express App
+		Understanding Middleware
+		Router
+		Handling HTTP Requests
+		Sending HTML Responses using template engine
+		Making REST API
+		Dealing with GET, POST, PUT, DELETE requests
+		Sending Static JSON as Response [teach JSON, cross domain requests here]
+		RESTful API’s and JSON
+
+3. Mongo DB and Mongoose [1 day- 21st]
+4. Angular [4 days - 24th-27th]
+
+   some topics of NodeJS, ExpressJS and MongoDB along with some topics of Angular will be completed during Angular session at the end:
+
+	Debugging - Industry Standard Techniques
+	Memory Leaks - Industry Standard Techniques
+        Completing the Demo Backend App (Express based REST API)
+        Fixing CORS Errors
+        Authentication and Security
+	Implementing Signup and Login using Passport
+	Creating Users with temporary Password
+	Password, Salt and Hash
+	E-Mail Verification
+	Login and JWT Token Generation
+	Sending E-Mails
+        Securing API endpoints
+        Scaling the app with PM2
