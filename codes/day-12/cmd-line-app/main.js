@@ -8,22 +8,26 @@ yargs.
             'name': {
                 describe: 'pass name',
                 demandOption: true,
-                type: 'string'
+                type: 'string',
+                alias: 'n'
             },
             'id': {
                 describe: 'pass id',
                 demandOption: true,
-                type: 'number'
+                type: 'number',
+                alias: 'i'
             },
             'price': {
                 describe: 'pass price',
                 type: 'number',
-                default: 0
+                default: 0,
+                alias: 'p'
             },
             'description': {
                 describe: 'pass description',
                 type: 'number',
-                default: ''
+                default: '',
+                alias: 'd'
             }
         },
         (args) => {
@@ -39,22 +43,26 @@ yargs.
             'name': {
                 describe: 'pass name',
                 default: '',
-                type: 'string'
+                type: 'string',
+                alias: 'n'
             },
             'id': {
                 describe: 'pass id',
                 demandOption: true,
-                type: 'number'
+                type: 'number',
+                alias: 'i'
             },
             'price': {
                 describe: 'pass price',
                 type: 'number',
-                default: 0
+                default: 0,
+                alias: 'p'
             },
             'description': {
                 describe: 'pass description',
                 type: 'number',
-                default: ''
+                default: '',
+                alias: 'd'
             }
         },
         (args) => {
