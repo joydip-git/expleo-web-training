@@ -1,7 +1,0 @@
-const createProduct = () => {
-
-}
-
-const deleteProduct = () => {
-
-}

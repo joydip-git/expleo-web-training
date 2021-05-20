@@ -27,3 +27,27 @@ Low level platform:
 	AI and Machine learning:
 	TensorFlow.js for machine learning in JS
 	TorchJS or ONIX.js
+
+
+node main.js add -n 'dell'  -i 101 -d 'abcd' -p 100
+process.argv =>[]
+
+yargs.parse()
+ =>
+
+{
+ '$0': 'main.js' 
+  _: [ 'add' ],
+    
+  n: 'dell',       
+  name: 'dell',    
+  i: 101,
+  id: 101,
+  d: NaN,
+  description: NaN,
+  p: 100,
+  price: 100,      
+   
+}
+
+

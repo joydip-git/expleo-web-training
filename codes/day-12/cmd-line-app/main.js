@@ -1,5 +1,7 @@
 const yargs = require("yargs");
+const { getProductById, getProducts, addProduct, deleteProduct, updateProduct } = require('./controller/productController')
 
+//add
 yargs.
     command(
         'add',
@@ -25,20 +27,21 @@ yargs.
             },
             'description': {
                 describe: 'pass description',
-                type: 'number',
+                type: 'string',
                 default: '',
                 alias: 'd'
             }
         },
-        (args) => {
-            console.log(args);
-        }
+        //this callback for something to happen in response to the command and its options
+        //yrags passes only the 'argv' property value, because you need only this to extract all the values passed through different options for that command
+        addProduct
     )
 
+//update
 yargs.
     command(
         'update',
-        'update product related data',
+        'update product data given its id',
         {
             'name': {
                 describe: 'pass name',
@@ -60,14 +63,53 @@ yargs.
             },
             'description': {
                 describe: 'pass description',
-                type: 'number',
+                type: 'string',
                 default: '',
                 alias: 'd'
             }
         },
-        (args) => {
-            console.log(args);
-        }
+        updateProduct
+    )
+
+//delete: id (mandatory)
+yargs.
+    command(
+        'delete',
+        'delete a product given its id',
+        {
+            'id': {
+                describe: 'pass id',
+                demandOption: true,
+                type: 'number',
+                alias: 'i'
+            }
+        },
+        deleteProduct
+    )
+
+//read-list: no option
+yargs.
+    command(
+        'read-list',
+        'displays all product data',
+        {},
+        getProducts
+    )
+
+//read-product: id (mandatory)
+yargs.
+    command(
+        'read-product',
+        'displays the product data given its id',
+        {
+            'id': {
+                describe: 'pass id',
+                demandOption: true,
+                type: 'number',
+                alias: 'i'
+            }
+        },
+        getProductById
     )
 
 yargs.parse()
