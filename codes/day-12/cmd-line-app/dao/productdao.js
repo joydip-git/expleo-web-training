@@ -20,6 +20,18 @@ const getRecords = (callAfterReading) => {
     fs.readFile(filePath, callAfterReading)
 }
 
+const getRecordsUsingPromise = () => {
+    console.log('in get records');
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, (error, data) => {
+            if (error)
+                reject(error)
+            if (data)
+                resolve(data)
+        })
+    })
+}
+
 const writeProduct = (productData) => {
     const getHandler = (err, data) => {
         if (err) {
@@ -44,6 +56,11 @@ const writeProduct = (productData) => {
                     } else {
                         console.log('product already exists');
                     }
+                } else {
+                    products.push(productData)
+                    fs.writeFile(filePath, JSON.stringify(products), () => {
+                        console.log('first product record added');
+                    })
                 }
             } else {
                 fs.writeFile(filePath, JSON.stringify([productData]), () => {
@@ -55,8 +72,48 @@ const writeProduct = (productData) => {
     getRecords(getHandler)
 }
 
-writeProduct({ productId: 101, productName: 'dell xps', price: 60000, description: 'new product from dell' })
+const writeProductUsingPromise = (productData) => {
+    let promiseObj = getRecordsUsingPromise();
+    promiseObj
+        .then((data) => {
+            console.log('got the data through promise');
+            let d = data.toString()
+            if (d !== '') {
+                console.log('array exists');
+                let products = JSON.parse(data)
+                if (products.length > 0) {
+
+                    let found = products.find(p => p.productId === productData.productId)
+
+                    if (!found) {
+                        products.push(productData)
+                        let jsonProducts = JSON.stringify(products)
+                        fs.writeFile(filePath, jsonProducts, () => {
+                            console.log('record added in the existing array');
+                        })
+                    } else {
+                        console.log('product already exists');
+                    }
+                } else {
+                    products.push(productData)
+                    fs.writeFile(filePath, JSON.stringify(products), () => {
+                        console.log('first product record added');
+                    })
+                }
+            } else {
+                fs.writeFile(filePath, JSON.stringify([productData]), () => {
+                    console.log('new array with product record added');
+                })
+            }
+        })
+        .catch((err) => console.log(err))
+}
+
+
+// writeProduct({ productId: 101, productName: 'dell xps', price: 60000, description: 'new product from dell' })
+// writeProductUsingPromise({ productId: 102, productName: 'dell xps', price: 60000, description: 'new product from dell' })
 
 module.exports = {
-    writeProduct
+    writeProduct,
+    writeProductUsingPromise
 }

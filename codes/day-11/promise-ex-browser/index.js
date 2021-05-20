@@ -6,8 +6,11 @@ document.getElementById('btn1').addEventListener('click', () => {
 
     // dataPromise.then(data => console.log(data))
     respPromise
-        .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(resp => { return resp.json() })
+        .then(data => {
+            return data.filter(p => p.price > 5000)
+        })
+        .then(filtered => console.log(filtered))
 
     /*
         const request = new XMLHttpRequest()

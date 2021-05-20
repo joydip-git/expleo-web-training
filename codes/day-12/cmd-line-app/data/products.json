@@ -1,1 +1,20 @@
-[{"productId":101,"productName":"dell xps","price":60000,"description":"new product from dell"}]
+[
+    {
+        "productId": 100,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    },
+    {
+        "productId": 101,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    },
+    {
+        "productId": 102,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    }
+]
