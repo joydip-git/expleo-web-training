@@ -1,7 +1,9 @@
 const product = require('../models/product')
+const { writeProduct } = require('../dao/productdao')
+
 const addProduct = (optionValues) => {
     const productObj = new product(optionValues.name, optionValues.id, optionValues.price, optionValues.description);
-    //funct(productObj)
+    writeProduct(productObj)
 }
 
 const deleteProduct = (optionValues) => {
