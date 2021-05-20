@@ -1,0 +1,29 @@
+
+
+
+	a. Network-based appliaction 
+	b. chat app
+	c. read/write 
+	d. database - mongodb, graphdb
+	e. CLI tools (webpack, babel, typescript,..., angular cli, create-react-app)
+	f. web applications
+		 - RESTFul API application (express js)
+		 - web applications
+
+	ng build/serve/test/e2e/lint
+
+        NPM run transpile
+        webpack --config webpack.config.js
+
+Low level platform:
+	other frameworks built upon Node JS framework
+	chat app: Socket.io
+	Nest JS: TypeScript
+	Meteor
+	Gatsby
+
+	NodeRed
+
+	AI and Machine learning:
+	TensorFlow.js for machine learning in JS
+	TorchJS or ONIX.js
