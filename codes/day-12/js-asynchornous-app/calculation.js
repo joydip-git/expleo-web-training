@@ -14,7 +14,7 @@ const multiply = (a, b) => {
     return multiResult;
 }
 
-const divide = (a, b) => {
+function divide(a, b) {
     if (b == 0) {
         throw new Error('denominator can not be zero')
     }
@@ -23,8 +23,8 @@ const divide = (a, b) => {
 }
 
 module.exports = {
-    add,
-    subtract,
-    multiply,
-    divide
+    add,//add: add,
+    subtract,//subtract: subtract,
+    divide,//divide: divide,
+    multiply // multiply: multiply
 }
