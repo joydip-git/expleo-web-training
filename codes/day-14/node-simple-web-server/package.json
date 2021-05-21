@@ -1,0 +1,12 @@
+{
+  "name": "node-simple-web-server",
+  "version": "1.0.0",
+  "description": "simple HTTP server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joydip",
+  "license": "ISC"
+}

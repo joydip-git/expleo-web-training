@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "dell xps",
+        "description": "new laptop from dell",
+        "price": 67000
+    },
+    {
+        "id": 2,
+        "name": "one plus 7",
+        "description": "new mobile from one plus",
+        "price": 50000
+    }
+]
