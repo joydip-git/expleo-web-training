@@ -7,8 +7,20 @@
     },
     {
         "id": 2,
-        "name": "one plus 7",
-        "description": "new mobile from one plus",
-        "price": 50000
+        "name": "dell xps",
+        "description": "new laptop from dell",
+        "price": 67000
+    },
+    {
+        "id": 3,
+        "name": "dell xps",
+        "description": "new laptop from dell",
+        "price": 67000
+    },
+    {
+        "id": 4,
+        "name": "dell xps",
+        "description": "new laptop from dell",
+        "price": 67000
     }
 ]

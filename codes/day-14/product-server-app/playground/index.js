@@ -19,3 +19,63 @@ app.get(`${objectUri}`, (req, res) => {
 app.listen(port, () => {
     console.log(`server is listenning at http://localhost:${port}${objectUri}`)
 })
+
+/*
+app.get(`${objectUri}`, (req, res) => {
+    getProducts()
+        .then((data) => {
+            let jsDataResponse = {
+                message: 'records found',
+                data: data
+            }
+            res.send(JSON.stringify(jsDataResponse))
+        })
+        .catch((err) => {
+            let jsErrorResponse = {
+                message: err,
+                data: []
+            }
+             res.send(JSON.stringify(jsErrorResponse))
+        })
+})
+
+app.get(`${objectUri}/:id`, (req, res) => {
+    if (req.params.id) {
+        let promise = getProductById(parseInt(req.params.id))
+        promise
+            .then(
+                (data) => {
+                    let jsDataResponse = {
+                        message: 'record found',
+                        data: data
+                    }
+                    res.send(JSON.stringify(jsDataResponse))
+                })
+            .catch((err) => {
+                let jsErrorResponse = {
+                    message: err,
+                    data: []
+                }
+                res.send(JSON.stringify(jsErrorResponse))
+            })
+    }
+})
+
+app.delete(`${objectUri}/:id`, (req, res) => {
+    deleteProduct(parseInt(req.params.id))
+        .then((data) => {
+            let jsDataResponse = {
+                message: data,
+                data: []
+            }
+            res.send(JSON.stringify(jsDataResponse))
+        })
+        .catch((err) => {
+            let jsErrorResponse = {
+                message: err,
+                data: []
+            }
+            res.send(JSON.stringify(jsErrorResponse))
+        })
+})
+*/

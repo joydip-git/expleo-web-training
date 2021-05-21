@@ -1,16 +1,18 @@
 const express = require('express')
+const { json } = require('body-parser');
+const cors = require('cors')
+const { router } = require('../routes/app-routes')
 
-const app = express()
 const port = 4000
-const objectUri = '/productservice'
+const app = express()
 
-app.get(`${objectUri}`, (req, res) => {
-    res.send('hello...')
-})
-app.get(`${objectUri}/:id`, (req, res) => {
-    res.send(`got a value through request: ${req.params.id}`)
-})
+//register the middleware to be used/applied on express js application request pipeline
+app.use(cors())
+app.use(json())
+app.use(router)
 
 app.listen(port, () => {
-    console.log(`server is listenning at http://localhost:${port}${objectUri}`)
+    console.log(`server is listenning at http://localhost:${port}/productservice`)
 })
+
+
