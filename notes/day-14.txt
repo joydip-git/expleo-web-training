@@ -68,6 +68,8 @@ DELETE		http://localhost:4000/productservice?id=1 id (query string)  	{message:'
 	b. after getting the information, client should use those URLs to make request
 		
 	http://localhost:4000/productservice/
+
+express js: light-weight web framework for Node js
 	
 
 

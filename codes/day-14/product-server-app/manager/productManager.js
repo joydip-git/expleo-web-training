@@ -1,6 +1,7 @@
 //service file/app: is a collection of operations/services
 const getProducts = () => {
     //read all records from file and ??
+    return 'all products'
 }
 
 const getProductById = (id) => {

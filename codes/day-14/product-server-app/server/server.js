@@ -1,12 +1,16 @@
-//create a HTTP server which responds with JSON data containing your name and salary
+const express = require('express')
 
-const http = require('http')
-const port = 3001;
-//const baseUrl = 'http://localhost:3000/productservice'
-const server = http.createServer((req, res) => {
+const app = express()
+const port = 4000
+const objectUri = '/productservice'
 
+app.get(`${objectUri}`, (req, res) => {
+    res.send('hello...')
+})
+app.get(`${objectUri}/:id`, (req, res) => {
+    res.send(`got a value through request: ${req.params.id}`)
 })
 
-server.listen(port, () => {
-    console.log(`server is running at port ${port} `)
+app.listen(port, () => {
+    console.log(`server is listenning at http://localhost:${port}${objectUri}`)
 })

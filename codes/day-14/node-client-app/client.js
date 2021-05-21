@@ -3,7 +3,7 @@ const http = require('http')
 const writeLine = process.stdout;
 const requestOptions = {
     host: 'localhost',
-    port: '3001',
+    port: '4000',
     method: 'GET'
 }
 const req = http.request(
