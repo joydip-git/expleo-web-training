@@ -1,4 +1,4 @@
-Remaining tooics from JavaScript:
+Remaining topics from JavaScript:
 
 1. Strict Mode (before Angular)
 2. HTML DOM and BOM (before Angular)
