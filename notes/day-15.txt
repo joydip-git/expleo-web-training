@@ -7,14 +7,66 @@
 6. Angular
 7. MongoDB
 
-const fn = (callback)=>{
-        const read=()=>{
-        	setTimeout(()=>{
-			fs.readFile('path',callback);
-		},1000);
-	}
-}
+My code: (what i am doing)
+	coding aspect:
+	1. single page based
+	2. codes are modular and all refer to the same index.html (when document object is used from any JS code)
+	3. from many files, i am trying to request the backend Node API server (using fetch)
+	4. i am creating entire application design in that single index.html page
 
-fn((e,d)=>{})
+	application aspect:
+	5. using JS as language (which provides no compile time checking as its dynamic porgramming language)
+	6. using babel for transpilation of ES6 code and ES6 module format (import/export)
+	7. using babelrc file for configuration of babel transpiler
+	8. using webpack for bunling and minifictaion for both development and production environment
+	9. using configuration file for webpack
+	10. using webpackdevserver as the server to host the development bundle and load the same in a browser (issuing certain port number)
 
-single page application
+My code: (what i want)
+	coding aspect:
+	----------------------------
+	1. single page based, that means there will be always a single target file loaded in the browser	
+	2. i am creating entire application design in that single index.html page. I want to create partial deisgns and then get it pasted in a some kind of placeholder in the target file (may be based on routing - when routes of the app changes or some other way)
+	3. codes are modular and all refer to the same index.html (when document object is used from any JS code). Here, i want to create those JS files which will be interacting with the individual partial HTML designs
+	4. from many files, i am trying to request the backend Node API server (using fetch API), which i want to write in a separate place/file  and using methods (requesting Node API server), so that any other JS file can call those methods and get data
+	const getProducts ()=>{	}
+	const getProduct = (id)=>{}
+	const addProduct = (p)=>{}
+	const updateProduct =(p)=>{}
+	const deleteProduct = (id)=>{}
+	5. routing feature for my application and those routes when changes in the browser, actually no request goes to any server machine. It's actually a bluff. so the changes in routes becuase, based on those changes i want individual contents to be displayed on the index.html file
+	6. I don't want direct DOM manipulation....
+	7. I want MVC architecture (Model - data, View - design, Controller - logic for interaction between M and V) or in general MV-* (Model-View-Anything -> Presenter (MV-P), View Model (MV-VM), Controller (MV-C))
+
+	application aspect: can someone handle the following too on my behalf????
+	-----------------------------------------------------------------------------------
+	5. using JS as language (which provides no compile time checking as its dynamic porgramming language)
+	6. using babel for transpilation of ES6 code and ES6 module format (import/export)
+	7. using babelrc file for configuration of babel transpiler
+	8. using webpack for bunling and minifictaion for both development and production environment
+	9. using configuration file for webpack
+	10. using webpackdevserver as the server to host the development bundle and load the same in a browser (issuing certain port number)
+
+	I want a pure client-side application: which any client can request and then responding server machine will send the entire app to the client browser and now that app will run in your browser, occassionally making request to server machine (hosting some backedn application written using Node JS+ExpressJs or Spring-MVC or Springboot or MS .NET Core MVC Web Api etc.) just for some data. 
+
+	Client-side Framework/Library:
+	------------------------------------------------------
+	Angular JS (1.6.x), Angular (2.0), React JS, Vue.Js etc.
+	2016 - May  - 2.0
+	2016 - sept - 4.0 - 5.0 - 6.0.....12.0
+
+	Angular helps you with:
+	------------------------------------------------------------------------
+	a. creating SPA - one target HTML file with many small designs (components)
+	b. avoid direct DOM manipulation and provide nice ways of passing data between design (HTML - View) and code (JS - controller) - known as Data Binding (one-way, two-way)
+	c. provides a mechnism to write reusbale piece of code (known as Service)
+	d. create component-based app (component = Design [HTML] + Code [JS]), where each component will have just content deisgn (not complete HTML) and corresponding code in JS file
+	e. nice way of navigation between components (routing)
+	f. creation of app structure through a CLI tool: angular-cli
+	g. Angular prefers TypeScript as programming language, which provides nice compile type checking and strict typing facility amongst others
+	h. nice dependency injection throughout the application
+	i. a huge consolidated library with more or less every bulit-in facility is present
+
+
+
+

@@ -31,7 +31,7 @@ const getProductById = (id) => {
                         return;
                     }
 
-                    let found = products.find(p => p.id === id);
+                    let found = products.find(p => p.productId === id);
                     if (!found) {
                         reject('no such record exists')
                         return;
@@ -59,7 +59,7 @@ const addProduct = (product) => {
                     () => resolve('added successfully'))
 
             } else {
-                let found = products.find(p => p.id === product.id)
+                let found = products.find(p => p.productId === product.productId)
                 if (found) {
                     reject('product already exists')
                     return;
@@ -98,7 +98,7 @@ const deleteProduct = (id) => {
                     reject('no records at all in the file')
                 }
                 else {
-                    let index = products.findIndex((p) => p.id === id)
+                    let index = products.findIndex((p) => p.productId === id)
                     if (index == -1) {
                         reject('no such product found')
                     } else {
