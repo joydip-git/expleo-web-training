@@ -43,6 +43,7 @@ const getProductByIdHandler = (req, res) => {
 }
 
 const deleteProductHandler = (req, res) => {
+    console.log(req.params.id)
     /**
      * params:{id:2}
      */

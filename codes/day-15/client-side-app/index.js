@@ -47,7 +47,10 @@ getData();
 //when the asynchornous callback is executed, by that time the function reference exists
 
 const showDataInTable = function (products) {
+
     var tableBody = document.getElementById('tblProductsBody')
+    //console.log(tableBody.getRootNode());
+    //console.log(tableBody.children)
 
     for (let index = 0; index < products.length; index++) {
         const product = products[index];

@@ -16,3 +16,5 @@ const fn = (callback)=>{
 }
 
 fn((e,d)=>{})
+
+single page application

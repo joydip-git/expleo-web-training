@@ -8,10 +8,14 @@ const cleanPluginModule = require('clean-webpack-plugin')
  }
  */
 const webpackConfigObj = {
-    entry: pathModule.resolve(__dirname, 'source', 'index.js'),
+    // entry: pathModule.resolve(__dirname, 'source', 'index.js'),
+    entry: {
+        main: pathModule.resolve(__dirname, 'source', 'index.js'),
+        client: pathModule.resolve(__dirname, 'source', 'client.js')
+    },
     output: {
-        // filename: '[name].bundle.js',
-        filename: 'product.bundle.js',
+        filename: '[name].bundle.js',
+        //filename: 'product.bundle.js',
         path: pathModule.resolve(__dirname, 'dist')
     },
     module: {
@@ -21,6 +25,9 @@ const webpackConfigObj = {
         }, {
             test: /\.(html|htm)$/,
             use: 'html-loader'
+        }, {
+            test: /\.css$/,
+            use: ['css-loader', 'style-loader']
         }]
     },
     plugins: [

@@ -8,4 +8,8 @@
 // console.log(anilTrainee.show())
 
 import { getData } from "./client";
-getData();
+
+console.log('index.js loaded')
+//document.addEventListener('load', getData)
+// document.onload = getData;
+document.addEventListener('mouseenter', getData)
