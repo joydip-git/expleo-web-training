@@ -67,6 +67,38 @@ My code: (what i want)
 	h. nice dependency injection throughout the application
 	i. a huge consolidated library with more or less every bulit-in facility is present
 
+JavaScript is a dynamic programming language
+var x = 10;
+x = true;
+
+var y = 'joy'
+y = 12;
+y.toLowerCase()
+
+
+var x = 10;
+x.toLowerCase()
+
+function add(a:number, b:number){}
+
+add('joy',12)
+
+function add(a:number, b:number):number{ return (a+b);}
+function addThree(a:number, b:number, c:number):number{ return (a+b+c);}
+function calculate(fnRef:(x:number,y:number)=>number, a:number, b:number){
+	fnRef(a,b)
+}
+calculate(addThree,10,20)
+
+TypeScript: super-set of JS, provides a compile time checking and strict typing and many other facilities
+tsc compiler
+webpack typescript loader: ts-loader
+create you own type
+
+
+
+
+
 
 
 
