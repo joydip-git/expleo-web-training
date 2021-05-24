@@ -1,0 +1,19 @@
+###
+GET http://localhost:4000/productservice/
+
+###
+GET http://localhost:4000/productservice/2
+
+###
+DELETE http://localhost:4000/productservice/2
+
+###
+POST http://localhost:4000/productservice
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"dell xps",
+    "description":"new laptop from dell",
+    "price":67000
+}

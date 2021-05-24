@@ -1,0 +1,81 @@
+1. how to create web server using node js - basic HTTP server
+2. RESTFul API web server using Node.js
+3. Client app (makes HTTP request quite like browser-based web applications) using Node.js
+
+Service Oriented Architecture:
+
+	Create a reusable piece of code whose functionalities can be requested via web
+
+	Java Web Services
+	Spring-MVC-Hibernet
+
+	ASP.NET Web Service
+	Remoting Technique
+
+	Service provider:
+	1. Create a reusable piece of code with functionalities (service type-->services/operations)
+	2. provides technique to create a host application whose job is to host that reusable piece of code, so that clients can make request for those methods via web (using certain URL): Remote Method Invocation (RMI)
+	
+	
+	Service Consumer:
+	a. consumer gets complete description of the hosted services through some file (web service description file - WSDL)
+	b. after getting the WSDL file now consumer creates object of that service class and then makes the call to the service class methods
+	var ps = new ProductService();
+	ps.fetchProducts() //--> http://localhost:4000/productservice/fetchProducts
+	
+	http://localhost:4000/productservice/getProductById?id=1
+
+RESTFul API Service Oriented Architecture:
+	Service provider:
+	1. Create a reusable piece of code with functionalities (service type-->services/operations)
+	2. provides technique to create a host application whose job is to host that reusable piece of code, so that clients can make request for those methods via web (using certain base URL): Remote Method Invocation (RMI)
+	3. provide an interface at the front of the host
+		a. that interface will interpret the incoming request and find out which method of HTTP protocol was used in that request
+		b. based on the protocol method one or the other service method will be invoked
+		   i.e. map the GET, POST, PUT, DELETE, etc. http protocol methods to certain service methods
+
+HTTP methods	URL					  method to call   req parameters	 response
+------------------------------------------------------------------------------------------------------------------
+GET		http://localhost:4000/productservice	  getProducts		NA		 array of products
+
+GET		http://localhost:4000/productservice/id	  getProductById	id (route data)	  a product object
+GET		http://localhost:4000/productservice?id=1 getProductById	id (query string) a product object
+
+POST		http://localhost:4000/productservice	  addProduct		product (req body) {message:'added',data:[]}
+
+PUT		http://localhost:4000/productservice	  updateProduct		product (req body) {message:'updated',data:[]}
+
+DELETE		http://localhost:4000/productservice/id	  deleteProduct		id (route data)    {message:'deleted',data:[]}
+DELETE		http://localhost:4000/productservice?id=1 deleteProduct		id (query string)  {message:'deleted',data:[]}
+
+	service consumer:
+	a. consumer gets complete description of the hosted services through some file (web service description file - WSDL) excluding the name of service methods. rather this file will provide information about certain URLs and corresponding HTTP protocol methods to use while making the requests
+
+HTTP methods	URL					  req parameters	 response
+------------------------------------------------------------------------------------------------------------------
+GET		http://localhost:4000/productservice	    NA		  	array of products
+
+GET		http://localhost:4000/productservice/id	  id (route data)	a product object
+GET		http://localhost:4000/productservice?id=1 id (query string) 	a product object
+
+POST		http://localhost:4000/productservice	  product (req body) 	{message:'added',data:[]}
+
+PUT		http://localhost:4000/productservice	  product (req body) 	{message:'updated',data:[]}
+
+DELETE		http://localhost:4000/productservice/id	  id (route data)    	{message:'deleted',data:[]}
+DELETE		http://localhost:4000/productservice?id=1 id (query string)  	{message:'deleted',data:[]}
+
+	b. after getting the information, client should use those URLs to make request
+		
+	http://localhost:4000/productservice/
+
+express js: light-weight web framework for Node js
+	
+
+
+
+
+
+
+
+

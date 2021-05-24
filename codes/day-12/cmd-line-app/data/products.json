@@ -1,0 +1,20 @@
+[
+    {
+        "productId": 100,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    },
+    {
+        "productId": 101,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    },
+    {
+        "productId": 102,
+        "productName": "hp probook",
+        "price": 52000,
+        "description": "new laptop from hp"
+    }
+]
