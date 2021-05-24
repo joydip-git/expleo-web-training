@@ -3,7 +3,7 @@ const http = require('http')
 const writeLine = process.stdout;
 const requestOptions = {
     host: 'localhost',
-    port: '4000',
+    port: '3000',
     method: 'GET'
 }
 const req = http.request(
@@ -12,7 +12,8 @@ const req = http.request(
         console.log(`status code: ${res.statusCode}`)
 
         res.addListener('data', (respData) => {
-            writeLine.write(respData)
+            // writeLine.write(respData)
+            console.log(respData.toString())
         })
     })
 

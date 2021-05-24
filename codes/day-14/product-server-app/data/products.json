@@ -3,24 +3,28 @@
         "id": 1,
         "name": "dell xps",
         "description": "new laptop from dell",
-        "price": 67000
+        "price": 67000,
+        "imagePath": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%253D%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fproduct&tbnid=nYQFUxHrhA0MMM&vet=12ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ..i&docid=Bfa8p_BERHYMYM&w=1000&h=667&q=product%20images&ved=2ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ"
     },
     {
         "id": 2,
         "name": "dell xps",
         "description": "new laptop from dell",
-        "price": 67000
+        "price": 67000,
+        "imagePath": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%253D%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fproduct&tbnid=nYQFUxHrhA0MMM&vet=12ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ..i&docid=Bfa8p_BERHYMYM&w=1000&h=667&q=product%20images&ved=2ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ"
     },
     {
         "id": 3,
         "name": "dell xps",
         "description": "new laptop from dell",
-        "price": 67000
+        "price": 67000,
+        "imagePath": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%253D%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fproduct&tbnid=nYQFUxHrhA0MMM&vet=12ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ..i&docid=Bfa8p_BERHYMYM&w=1000&h=667&q=product%20images&ved=2ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ"
     },
     {
         "id": 4,
         "name": "dell xps",
         "description": "new laptop from dell",
-        "price": 67000
+        "price": 67000,
+        "imagePath": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fixid%3DMnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHw%253D%26ixlib%3Drb-1.2.1%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fproduct&tbnid=nYQFUxHrhA0MMM&vet=12ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ..i&docid=Bfa8p_BERHYMYM&w=1000&h=667&q=product%20images&ved=2ahUKEwiSjdnOyuHwAhWz2nMBHXOBCSEQMygAegUIARDUAQ"
     }
 ]

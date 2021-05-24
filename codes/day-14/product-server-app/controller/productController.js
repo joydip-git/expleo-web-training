@@ -43,6 +43,10 @@ const getProductByIdHandler = (req, res) => {
 }
 
 const deleteProductHandler = (req, res) => {
+    /**
+     * params:{id:2}
+     */
+    console.log(typeof req.params.id)
     let deletePromise = deleteProduct(parseInt(req.params.id))
 
     deletePromise

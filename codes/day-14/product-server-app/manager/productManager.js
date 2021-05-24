@@ -83,7 +83,7 @@ const updateProduct = (product) => {
 }
 
 const deleteProduct = (id) => {
-    //deletes a product record from file and ??
+    //deletes a product record from file given the id of the product
     return new Promise((resolve, reject) => {
         fs.readFile('./data/products.json', (err, data) => {
             if (err) {
@@ -93,15 +93,24 @@ const deleteProduct = (id) => {
 
             if (data) {
                 let products = JSON.parse(data)
-                let index = products.findIndex(p => p.id === id)
-                if (index == -1) {
-                    reject('no such product found')
-                    return;
+
+                if (products.length == 0) {
+                    reject('no records at all in the file')
                 }
-                products.splice(index, 1);
-                fs.writeFile('./data/products.json', JSON.stringify(products), () => {
-                    resolve('record deleted')
-                })
+                else {
+                    let index = products.findIndex((p) => p.id === id)
+                    if (index == -1) {
+                        reject('no such product found')
+                    } else {
+                        products.splice(index, 1);
+                        fs.writeFile(
+                            './data/products.json',
+                            JSON.stringify(products),
+                            () => {
+                                resolve('record deleted')
+                            })
+                    }
+                }
             }
         })
     })

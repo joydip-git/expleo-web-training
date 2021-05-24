@@ -1,0 +1,18 @@
+1. JavaScript
+2. Node JS - event emitter
+3. Express JS
+
+4. JavaScript - UI
+5. TypeScript
+6. Angular
+7. MongoDB
+
+const fn = (callback)=>{
+        const read=()=>{
+        	setTimeout(()=>{
+			fs.readFile('path',callback);
+		},1000);
+	}
+}
+
+fn((e,d)=>{})
