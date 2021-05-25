@@ -1,0 +1,9 @@
+Enter 1st Value:&nbsp;
+<input type="number" #firstRef>
+<br>
+Enter 2nd Value:&nbsp;
+<input type="number" #secondRef>
+<br>
+<button (click)="add(firstRef.value, secondRef.value)">Add</button>
+<br>
+<label>Add Result:{{result}}</label>

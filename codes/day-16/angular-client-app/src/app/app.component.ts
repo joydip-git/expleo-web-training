@@ -13,6 +13,7 @@ export class AppComponent {
     imgPath = '../assets/images/headset.jfif'
     imgWidth = 50
     imgMargin = 2
+
     // changeHeaderValue(element: HTMLInputElement): void {
     //     console.log(element)
     //     this.title = element.value
