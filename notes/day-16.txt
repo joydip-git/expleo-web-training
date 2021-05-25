@@ -70,3 +70,18 @@ Data Binding in Angular:
 
 >ng new product-management-system
 
+Directives:
+	a. Component Directive (Component --> @Component({}))	
+	   This directive has View associated with it
+
+	b. Structural Directive (directives --> *ngIf, *ngFor,...): decides the template structure
+	   This directive does not contain any view
+
+	c. Attibute Directive (ngClass, ngStyle,...)
+	   This directive does not contain any view
+	   No separate symbol for them (no @ / *)
+
+
+
+
+

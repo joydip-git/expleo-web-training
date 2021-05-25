@@ -8,9 +8,50 @@ Title:&nbsp;<input type="" #titleRef>
 <br>
 <button (click)="changeHeaderValue(titleRef.value)">Change Header</button>
 <br>
-<img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
+<!-- <img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> -->
+<img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
+<br>
+<img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
+
 <br>
 <br>
 
 <app-add></app-add>
 <app-subtract></app-subtract>
+
+<br><br>
+<!-- directive ngFor-->
+<ul>
+    <li *ngFor="let num of numbers">
+        {{ num }}
+    </li>
+</ul>
+<select name="" id="">
+    <option selected disabled>--select--</option>
+    <option *ngFor="let name of names">
+        {{name}}
+    </option>
+</select>
+<br>
+
+<table *ngIf="contactData && contactData.length>2; else alternate">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contactData">
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #alternate>
+    <div>
+        not more than 2 ercords can be displayed at a time
+    </div>
+</ng-template>
