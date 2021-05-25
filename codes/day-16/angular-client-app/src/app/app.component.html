@@ -1,3 +1,11 @@
 <h2>
-    Welcome to Angular
+    {{ title }}
 </h2>
+<p [style.width.px]="paraWidth">
+    &copy; Expleo, {{year}}
+</p>
+Title:&nbsp;<input type="" #titleRef>
+<br>
+<button (click)="changeHeaderValue(titleRef.value)">Change Header</button>
+<br>
+<img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">

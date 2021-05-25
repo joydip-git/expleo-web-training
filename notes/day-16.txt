@@ -56,3 +56,15 @@ Angular Module Concept:
 			
 	order
 	resturant
+
+Data Binding in Angular:
+	helps you to avoid direct DOM manipulation
+
+	a. component code --> View
+		i. interpolation ( convert the value in string)
+		ii. property binding: you target some property of an html element and bind it to a property present in the component code 
+		[html-ele-prop-name]="prop-in-comp-code"
+		Retains the type of the value (does not convert the value in string)
+	b. View --> component code
+		event binding
+
