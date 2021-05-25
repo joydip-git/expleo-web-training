@@ -1,0 +1,23 @@
+<div class="table-responsive" style="width: 300px;margin: 100px;">
+    <table class="table" *ngIf="contactData && contactData.length>0; else alternate">
+        <thead style="background-color: burlywood;">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contactData">
+                <td>{{contact.name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #alternate>
+        <div>
+            not more than 2 ercords can be displayed at a time
+        </div>
+    </ng-template>
+</div>

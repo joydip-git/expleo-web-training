@@ -1,18 +1,32 @@
-<h2>
-    {{ title }}
-</h2>
-<p [style.width.px]="paraWidth">
-    &copy; Expleo, {{year}}
-</p>
-Title:&nbsp;<input type="" #titleRef>
-<br>
-<button (click)="changeHeaderValue(titleRef.value)">Change Header</button>
-<br>
-<!-- <img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> -->
-<img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
-<br>
-<img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
+<div class="panel panel-primary">
 
+    <div class="panel panel-heading">
+        <h2>
+            {{ title }}
+        </h2>
+    </div>
+    <div class="panel panel-body">
+        <p [style.width.px]="paraWidth">
+            &copy; Expleo, {{year}}
+        </p>
+    </div>
+    <div style="margin: 20px;">
+        Title:&nbsp;
+        <!-- <input type="text" #titleRef (change)="changeHeaderValue(titleRef.value)" [value]='title'> -->
+
+        <input type="text" [(ngModel)]='title'>
+
+        <br>
+        <br>
+        <!-- <input type="button" class="btn btn-danger" (click)="changeHeaderValue(titleRef.value)" value="Change Header"> -->
+        <br>
+        <!-- <img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> -->
+        <img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
+        <br>
+        <img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
+
+    </div>
+</div>
 <br>
 <br>
 
@@ -26,32 +40,20 @@ Title:&nbsp;<input type="" #titleRef>
         {{ num }}
     </li>
 </ul>
-<select name="" id="">
-    <option selected disabled>--select--</option>
-    <option *ngFor="let name of names">
-        {{name}}
-    </option>
-</select>
+<div class="container">
+    <select name="" id="" class="dropdown" style="border:1px solid black;border-radius: 5px;">
+        <option selected disabled>--select--</option>
+        <option *ngFor="let name of names">
+            {{name}}
+        </option>
+    </select>
+</div>
 <br>
 
-<table *ngIf="contactData && contactData.length>0; else alternate">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let contact of contactData">
-            <td>{{contact.name}}</td>
-            <td>{{contact.email}}</td>
-            <td>{{contact.name}}</td>
-        </tr>
-    </tbody>
-</table>
-<ng-template #alternate>
-    <div>
-        not more than 2 ercords can be displayed at a time
-    </div>
-</ng-template>
+<app-add-contact>
+
+</app-add-contact>
+<br><br>
+<app-contacts>
+
+</app-contacts>

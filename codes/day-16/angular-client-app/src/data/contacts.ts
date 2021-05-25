@@ -9,3 +9,7 @@ export const contacts = [{
     phone: 90909090091
 
 }]
+export function updateContact(contact: any) {
+    contacts.push(contact)
+}
+

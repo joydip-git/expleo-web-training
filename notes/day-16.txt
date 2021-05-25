@@ -77,7 +77,7 @@ Directives:
 	b. Structural Directive (directives --> *ngIf, *ngFor,...): decides the template structure
 	   This directive does not contain any view
 
-	c. Attibute Directive (ngClass, ngStyle,...)
+	c. Attibute Directive (ngClass, ngStyle,... )
 	   This directive does not contain any view
 	   No separate symbol for them (no @ / *)
 
@@ -96,6 +96,9 @@ Directives:
 10. create a products.module.ts file in "products" folder
 11. register your component (product-list) in that module file
 12. import products.module in "app.module.ts"
+
+13. create a component "add-product" in products folder
+14. register in the products.module.ts
 
 
 

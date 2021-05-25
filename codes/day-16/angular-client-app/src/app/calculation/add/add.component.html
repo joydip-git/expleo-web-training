@@ -1,9 +1,11 @@
-Enter 1st Value:&nbsp;
-<input type="number" #firstRef>
-<br>
-Enter 2nd Value:&nbsp;
-<input type="number" #secondRef>
-<br>
-<button (click)="add(firstRef.value, secondRef.value)">Add</button>
-<br>
-<label>Add Result:{{result}}</label>
+<div class='container' style="width: 300px;">
+    Enter 1st Value:&nbsp;
+    <input type="number" #firstRef class="form-control">
+    <br>
+    Enter 2nd Value:&nbsp;
+    <input type="number" #secondRef class="form-control">
+    <br>
+    <input type='button' class="btn btn-primary" (click)="add(firstRef.value, secondRef.value)" value="Add">
+    <br>
+    <label>Add Result:{{result}}</label>
+</div>

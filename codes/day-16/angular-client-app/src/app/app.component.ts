@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { contacts } from '../data/contacts'
+
 
 @Component({
     templateUrl: './app.component.html',
@@ -17,16 +17,16 @@ export class AppComponent {
     applyStyle = true
     numbers = [1, 3, 4, 2]
     names = ['joydip', 'anil', 'sunil']
-    contactData = contacts
+
 
     // changeHeaderValue(element: HTMLInputElement): void {
     //     console.log(element)
     //     this.title = element.value
     // }
-    changeHeaderValue(val: string): void {
-        this.title = val
-        // for (let num of this.numbers) {
-        //     console.log(num)
-        // }
-    }
+    // changeHeaderValue(val: string): void {
+    //     this.title = val
+    //     // for (let num of this.numbers) {
+    //     //     console.log(num)
+    //     // }
+    // }
 }
