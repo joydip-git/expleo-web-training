@@ -1,0 +1,58 @@
+component:
+	a. Design (HTML[partial]) and Styles (css) - (View)
+	b. code (controller/component class code - TypeScript)
+	c. Metadata ?? - the information that you pass through an object to any component decoratorfunction, @Component({})
+
+Create a file 
+Naming styles: name.component.ts
+
+In that file create an exportable class
+Naming style: filenameComponent
+
+Every class which you want to be recognised as a component class must have a decorator function: Component
+import from @angular/core module
+
+To the Component decorator function, you must pass an object to pass information about:
+	a. which View needs to be linked (template/templateUrl)
+	b. which CSS fil(s) needs to be linked (styles/styleUrls)
+	c.
+	d.
+
+Angular Module Concept: 
+	an unit which is used as registry of some assets (components) considered to be part of one logical module
+	It's a class which is decorated with @NgModule() decorator function
+
+
+	THIS IS NOT JAVASCRIPT MODULE CONCEPT (A SINGLE FILE)
+	In angular you can create series of components and then group them under different logical module
+
+	customer:
+		customer-input:
+			customer-input.component.ts: export class CustomerInputComponent
+			customer-input.component.html
+			customer-input.component.css
+
+		customer-payment-methods:
+			customer-payment-methods.component.ts: export class CustomerPaymentMethodsComponent
+			customer-payment-methods.component.html
+			customer-payment-methods.component.css
+
+	customer.module.ts (angular module file) - export class CustomerModule
+		- register CustomerInputComponent and CustomerPaymentMethodsComponent here
+	
+	@NgModule({
+		declarations:[CustomerInputComponent, CustomerPaymentMethodsComponent]
+	})
+	export class CustomerModule
+
+
+	payment:
+		payment-options:
+			payment-options.component.ts
+			payment-options.component.html
+
+	payment.module.ts
+		- register payment related assests
+			
+	order
+	resturant
