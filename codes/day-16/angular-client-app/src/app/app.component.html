@@ -34,7 +34,7 @@ Title:&nbsp;<input type="" #titleRef>
 </select>
 <br>
 
-<table *ngIf="contactData && contactData.length>2; else alternate">
+<table *ngIf="contactData && contactData.length>0; else alternate">
     <thead>
         <tr>
             <th>Name</th>

@@ -81,6 +81,23 @@ Directives:
 	   This directive does not contain any view
 	   No separate symbol for them (no @ / *)
 
+1. open PMSAPP
+2. create a folder "products" inside "app" folder
+3. inside "products" folder create another folder "product-list"
+4. inside "product-list" folder create - "product-list.component.ts/html/css" files
+
+5. create another folder "data" inside "src" directory
+6. add a file named products.ts
+7. declare an array variable and assign the copied JSON array to it. export the variable
+
+8. Import the products array from products.ts file in the product-list.component.ts and assign the same to a property in the class
+9. in HTML file display the products (only name, image, code, price, rating) through a table
+
+10. create a products.module.ts file in "products" folder
+11. register your component (product-list) in that module file
+12. import products.module in "app.module.ts"
+
+
 
 
 
