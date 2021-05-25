@@ -68,3 +68,5 @@ Data Binding in Angular:
 	b. View --> component code
 		event binding
 
+>ng new product-management-system
+
