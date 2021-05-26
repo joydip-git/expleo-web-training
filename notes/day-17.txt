@@ -121,6 +121,13 @@ what's a pipe?
 
 	7. provide navigation
 
+	@Component <-- @Injectable()
+	@Pipe      <-- @Injectable
+
+	Reactive Extensions to JavaScript
+	rxjs<--package
+	
+
 
 
 

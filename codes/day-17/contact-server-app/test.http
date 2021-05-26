@@ -1,0 +1,18 @@
+###
+GET http://localhost:4001/contactservice/
+
+###
+GET http://localhost:4001/contactservice/9090909090
+
+###
+DELETE http://localhost:4001/contactservice/9090909090
+
+###
+POST http://localhost:4001/contactservice
+Content-Type: application/json
+
+{
+        "phone": 9090909094,
+        "name": "ramnath",
+        "email": "RAM@GMAIL.COM"
+    }

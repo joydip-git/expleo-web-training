@@ -7,11 +7,20 @@ import { ContactsPipe } from "./pipes/contacts.pipe";
 import { ContactRoutesModule } from "./contactroutes.module";
 import { ContactDetailComponent } from "./components/contact-detail/contact-detail.component";
 import { UpdateContactComponent } from "./components/update-contact/update-contact.component";
+import { ContactService } from "./services/contact.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     //component, pipe, directives
     declarations: [ContactListComponent, AddContactComponent, ContactsPipe, ContactDetailComponent, UpdateContactComponent],
-    imports: [BrowserModule, FormsModule, ContactRoutesModule],
+
+    //moule names
+    imports: [BrowserModule, FormsModule, ContactRoutesModule, HttpClientModule],
+
+    //only service
+    providers: [ContactService]
+
+    //name of pipes/components/directives and modules
     // exports: [ContactListComponent, AddContactComponent,]
 })
 export class ContactsModule {

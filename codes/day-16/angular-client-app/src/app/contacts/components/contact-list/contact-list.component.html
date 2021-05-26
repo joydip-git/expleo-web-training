@@ -21,6 +21,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -40,12 +41,17 @@
                         <u>{{contact.phone}}</u>
                     </div>
                 </td>
+                <td>
+                    <button class="btn btn-danger" (click)='deleteRecord(contact.phone)'>
+                        Delete
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>
     <ng-template #alternate>
         <div>
-            not more than 2 ercords can be displayed at a time
+            no records to display
         </div>
     </ng-template>
 </div>
