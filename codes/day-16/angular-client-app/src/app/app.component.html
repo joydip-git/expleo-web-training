@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<!-- <div class="panel panel-primary">
 
     <div class="panel panel-heading">
         <h2>
@@ -12,20 +12,20 @@
     </div>
     <div style="margin: 20px;">
         Title:&nbsp;
-        <!-- <input type="text" #titleRef (change)="changeHeaderValue(titleRef.value)" [value]='title'> -->
+        <!-- <input type="text" #titleRef (change)="changeHeaderValue(titleRef.value)" [value]='title'>
 
-        <input type="text" [(ngModel)]='title'>
+<input type="text" [(ngModel)]='title'>
 
-        <br>
-        <br>
-        <!-- <input type="button" class="btn btn-danger" (click)="changeHeaderValue(titleRef.value)" value="Change Header"> -->
-        <br>
-        <!-- <img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> -->
-        <img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
-        <br>
-        <img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
+<br>
+<br>
+<input type="button" class="btn btn-danger" (click)="changeHeaderValue(titleRef.value)" value="Change Header"> 
+<br>
+<img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> 
+<img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
+<br>
+<img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
 
-    </div>
+</div>
 </div>
 <br>
 <br>
@@ -34,7 +34,7 @@
 <app-subtract></app-subtract>
 
 <br><br>
-<!-- directive ngFor-->
+
 <ul>
     <li *ngFor="let num of numbers">
         {{ num }}
@@ -48,12 +48,28 @@
         </option>
     </select>
 </div>
-<br>
+<br> -->
 
-<app-add-contact>
+<!-- <app-add-contact>
 
 </app-add-contact>
 <br><br>
 <app-contacts>
 
-</app-contacts>
+</app-contacts> -->
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        <h2>
+            {{ title }}
+        </h2>
+    </div>
+    <app-dashboard>
+
+    </app-dashboard>
+    <div class="panel panel-body">
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+</div>
