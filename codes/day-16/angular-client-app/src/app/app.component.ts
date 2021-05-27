@@ -7,18 +7,18 @@ import { Component } from "@angular/core";
     selector: 'app-root'
 })
 export class AppComponent {
-    //type inference
+
     title = 'Welcome to Contact Management System'
-    year = 2021
-    paraWidth = 200
-    imgPath = '../assets/images/headset.jfif'
-    imgWidth = 50
-    imgMargin = 20
-    applyStyle = true
-    numbers = [1, 3, 4, 2]
-    names = ['joydip', 'anil', 'sunil']
 
 
+    // year = 2021
+    // paraWidth = 200
+    // imgPath = '../assets/images/headset.jfif'
+    // imgWidth = 50
+    // imgMargin = 20
+    // applyStyle = true
+    // numbers = [1, 3, 4, 2]
+    // names = ['joydip', 'anil', 'sunil']
     // changeHeaderValue(element: HTMLInputElement): void {
     //     console.log(element)
     //     this.title = element.value

@@ -1,3 +1,35 @@
-<p>
-    Contact Detail
-</p>
+<div class='panel panel-primary' *ngIf='contact'>
+
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle + ': ' + (contact.name|uppercase) }}
+        <a class='btn btn-primary' style='width:80px;float:right'>
+            Edit
+        </a>
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Name:</div>
+                    <div class='col-md-6'>{{contact.name|uppercase}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Email:</div>
+                    <div class='col-md-6'>{{contact.email|lowercase}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Phone:</div>
+                    <div class='col-md-6'>{{contact.phone}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class='panel-footer'>
+            <a class='btn btn-default' (click)='goBack()' style='width:80px'>
+                <i class='glyphicon glyphicon-chevron-left'></i> Back
+            </a>
+        </div>
+    </div>
+
+</div>

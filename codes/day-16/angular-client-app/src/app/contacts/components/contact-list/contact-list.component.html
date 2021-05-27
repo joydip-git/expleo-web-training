@@ -15,7 +15,7 @@
 <br>
 -->
 <div class="table-responsive" style="width: 400px;margin: 100px;">
-    <table class="table" *ngIf="contactData && contactData.length>0; else alternate">
+    <table class="table" *ngIf="contactRecords && contactRecords.length>0; else alternate">
         <thead style="background-color: burlywood;">
             <tr>
                 <th>Name</th>
@@ -25,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let contact of contactData|contactfilter:filterText">
+            <tr *ngFor="let contact of contactRecords|contactfilter:filterText">
                 <td>
                     <div [routerLink]="['/contacts/show',contact.phone]" style="color: blue;cursor: pointer;"
                         routerLinkActive='active'>

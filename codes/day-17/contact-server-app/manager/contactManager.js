@@ -47,39 +47,68 @@ const addContact = (contact) => {
         fs.readFile('./data/contacts.json', (err, data) => {
             if (err) {
                 reject(err)
-                return;
             }
+            else {
+                let contacts = JSON.parse(data);
+                if (contacts.length == 0) {
+                    contacts.push(contact)
+                    fs.writeFile(
+                        './data/contacts.json',
+                        JSON.stringify(contacts),
+                        () => {
+                            resolve('added successfully')
+                        })
 
-            let contacts = JSON.parse(data);
-            if (contacts.length == 0) {
-                contacts.push(contact)
-                fs.writeFile(
-                    './data/contacts.json',
-                    JSON.stringify(contacts),
-                    () => resolve('added successfully'))
-
-            } else {
-                let found = contacts.find(p => p.phone === contact.phone)
-                if (found) {
-                    reject('product already exists')
-                    return;
+                } else {
+                    let found = contacts.find(p => p.phone === contact.phone)
+                    if (found) {
+                        reject('product already exists')
+                    } else {
+                        contacts.push(contact);
+                        fs.writeFile(
+                            './data/contacts.json',
+                            JSON.stringify(contacts),
+                            () => {
+                                resolve(contact)
+                            })
+                    }
                 }
-
-                contacts.push(contact);
-                fs.writeFile(
-                    './data/contacts.json',
-                    JSON.stringify(contacts),
-                    () => {
-                        resolve('added successfully')
-                    })
-
             }
         })
     })
 }
 
 const updateContact = (contact) => {
-    //updates a product record into file and ??
+    return new Promise((resolve, reject) => {
+        fs.readFile('./data/contacts.json', (err, data) => {
+            if (err) {
+                reject(err)
+                return;
+            }
+
+            if (data) {
+                let contacts = JSON.parse(data)
+
+                if (contacts.length == 0) {
+                    reject('no records at all in the file')
+                }
+                else {
+                    let index = contacts.findIndex((p) => p.phone === contact.phone)
+                    if (index == -1) {
+                        reject('no such contact found')
+                    } else {
+                        contacts.splice(index, 1, contact);
+                        fs.writeFile(
+                            './data/contacts.json',
+                            JSON.stringify(contacts),
+                            () => {
+                                resolve(contact)
+                            })
+                    }
+                }
+            }
+        })
+    })
 }
 
 const deleteContact = (phone) => {
@@ -99,15 +128,16 @@ const deleteContact = (phone) => {
                 }
                 else {
                     let index = contacts.findIndex((p) => p.phone === phone)
+                    let found = contacts.find((p) => p.phone === phone)
                     if (index == -1) {
-                        reject('no such product found')
+                        reject('no such contact found')
                     } else {
                         contacts.splice(index, 1);
                         fs.writeFile(
                             './data/contacts.json',
                             JSON.stringify(contacts),
                             () => {
-                                resolve('record deleted')
+                                resolve(found)
                             })
                     }
                 }

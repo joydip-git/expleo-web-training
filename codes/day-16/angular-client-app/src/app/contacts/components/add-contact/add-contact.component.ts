@@ -3,18 +3,24 @@ import { Contact } from '../../models/contact.model';
 import { ContactService } from '../../services/contact.service';
 
 @Component({
+
+  //use selector if you want to use it as nested component
+  //not required if it is going to be loaded because of route change
   // selector: 'app-add-contact',
+
+  //component-level provider for ContactService
+  // providers: [ContactService]
+
   templateUrl: './add-contact.component.html',
   styleUrls: ['./add-contact.component.css']
-  // providers: [ContactService]
 })
 export class AddContactComponent {
   constructor(private serviceRef: ContactService) {
 
   }
-  submitContact(formData: Contact) {
+  submitContact(formData: any) {
     console.log(formData)
-    this.serviceRef.addContact(formData)
+    this.serviceRef.addContact({ name: formData.name, email: formData.email, phone: formData.phone })
       .subscribe(
         resp => console.log(resp),
         e => console.log(e))

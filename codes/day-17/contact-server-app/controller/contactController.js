@@ -1,21 +1,16 @@
 const { getContacts, getContactByPhone, deleteContact, addContact, updateContact } = require("../manager/contactManager")
+const { generateResponse } = require("./responseGenerator")
 
 const getContactsHandler = (req, res) => {
     let getAllPromise = getContacts()
     getAllPromise
         .then((data) => {
-            let jsDataResponse = {
-                message: 'records found',
-                data: data
-            }
-            res.send(JSON.stringify(jsDataResponse))
+            let jsDataResponse = generateResponse(data, 'records found')
+            res.send(jsDataResponse)
         })
         .catch((err) => {
-            let jsErrorResponse = {
-                message: err,
-                data: []
-            }
-            res.send(JSON.stringify(jsErrorResponse))
+            let jsErrorResponse = generateResponse([], err)
+            res.send(jsErrorResponse)
         })
 }
 
@@ -25,70 +20,56 @@ const geContactByPhoneHandler = (req, res) => {
         getPromise
             .then(
                 (data) => {
-                    let jsDataResponse = {
-                        message: 'record found',
-                        data: data
-                    }
-                    res.send(JSON.stringify(jsDataResponse))
+                    let jsDataResponse = generateResponse(data, 'record found')
+                    res.send(jsDataResponse)
                 })
             .catch((err) => {
-                let jsErrorResponse = {
-                    message: err,
-                    data: []
-                }
-                res.send(JSON.stringify(jsErrorResponse))
+                let jsErrorResponse = generateResponse([], err)
+                res.send(jsErrorResponse)
             })
     }
 }
 
 const deleteContactHandler = (req, res) => {
-    console.log(req.params.phone)
-    /**
-     * params:{id:2}
-     */
-    //console.log(typeof req.params.phone)
     let deletePromise = deleteContact(parseInt(req.params.phone))
 
     deletePromise
         .then(
             (data) => {
-                let jsDataResponse = {
-                    message: data,
-                    data: []
-                }
-                res.send(JSON.stringify(jsDataResponse))
+                let jsDataResponse = generateResponse(data, 'record deleted')
+                res.send(jsDataResponse)
             })
         .catch(
             (err) => {
-                let jsErrorResponse = {
-                    message: err,
-                    data: []
-                }
-                res.send(JSON.stringify(jsErrorResponse))
+                let jsErrorResponse = generateResponse([], err)
+                res.send(jsErrorResponse)
             })
 }
 
 const addContactHandler = (req, res) => {
     let addPromise = addContact(req.body)
     addPromise
-        .then(res => {
-            let jsDataResponse = {
-                message: res,
-                data: []
-            }
-            res.send(JSON.stringify(jsDataResponse));
+        .then(data => {
+            let jsDataResponse = generateResponse(data, 'record added')
+            res.send(jsDataResponse);
         })
         .catch(err => {
-            let jsErrorResponse = {
-                message: err,
-                data: []
-            }
-            res.send(JSON.stringify(jsErrorResponse));
+            let jsErrorResponse = generateResponse([], err)
+            res.send(jsErrorResponse);
         })
 }
 
 const updateContactHandler = (req, res) => {
-
+    let updatePromise = updateContact(req.body)
+    updatePromise
+        .then(data => {
+            let jsDataResponse = generateResponse(data, 'record updated')
+            res.send(jsDataResponse);
+        })
+        .catch(err => {
+            let jsErrorResponse = generateResponse([], err)
+            res.send(jsErrorResponse);
+        })
 }
 
 module.exports = {

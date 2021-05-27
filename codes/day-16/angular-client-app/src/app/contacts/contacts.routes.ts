@@ -7,6 +7,6 @@ import { UpdateContactComponent } from "./components/update-contact/update-conta
 export const contactsRoutes: Routes = [
     { path: 'contacts/show', component: ContactListComponent },
     { path: 'contacts/add', component: AddContactComponent },
-    { path: 'contacts/show/:id', component: ContactDetailComponent },
-    { path: 'contacts/update/:id', component: UpdateContactComponent }
+    { path: 'contacts/show/:phone', component: ContactDetailComponent },
+    { path: 'contacts/update/:phone', component: UpdateContactComponent }
 ]

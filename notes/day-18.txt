@@ -1,0 +1,30 @@
+
+Contacts --> ContactDetail-->Contacts-->AddContact-->Contacts-->UpdateContact
+
+How to pass data from one component to another?
+	a. routed component --> route data (thorugh route parameter), query string (?id=1), req body
+	b. nested component
+
+	router-outlet
+	routerLink
+	routerLinkActive
+
+	Route (object)
+	Routes	=> collection of Routes (object)
+
+	ActivatedRoute (service)
+	RouterState: collection of ActivatedRoutes (service)
+	Router=> router engine (service)
+
+	RouterModule
+
+	contacts/:id1/:id2/.....
+	/contacts/1/2/3/4
+	navigation information1 : ActivatedRoute: params --> { id1:, id2:, id3:}
+	navigation information2 : ActivatedRoute
+	navigation information3 : ActivatedRoute
+	navigation information4 : ActivatedRoute
+	navigation information5 : ActivatedRoute
+
+
+

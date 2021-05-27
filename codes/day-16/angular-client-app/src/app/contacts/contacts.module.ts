@@ -9,6 +9,8 @@ import { ContactDetailComponent } from "./components/contact-detail/contact-deta
 import { UpdateContactComponent } from "./components/update-contact/update-contact.component";
 import { ContactService } from "./services/contact.service";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
+
 
 @NgModule({
     //component, pipe, directives

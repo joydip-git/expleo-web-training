@@ -1,3 +1,29 @@
-<p>
-    Update Contact
-</p>
+<div class="container" *ngIf='contact'>
+    <form class="form-horizontal" ngForm #contactForm="ngForm" (ngSubmit)="submitContact(contactForm.value)">
+        <div class="form-group">
+            <label for="" class="col-sm-2">Name</label>
+            <div class="col-sm-10">
+                <input type="text" name="name" id="cname" class="form-control" [ngModel]='contact.name'>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2">Email</label>
+            <div class="col-sm-10">
+                <input type="email" name="email" id="cemail" class="form-control" [ngModel]='contact.email'>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2">Mobile</label>
+            <div class="col-sm-10">
+                <input type="number" name="phone" id="cphone" class="form-control" [ngModel]='contact.phone' readonly>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+        </div>
+    </form>
+</div>

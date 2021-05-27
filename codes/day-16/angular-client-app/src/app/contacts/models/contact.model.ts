@@ -5,5 +5,5 @@ export interface Contact {
 }
 export interface ContactResponse {
     message: string;
-    data: Contact[];
+    data: any;
 }

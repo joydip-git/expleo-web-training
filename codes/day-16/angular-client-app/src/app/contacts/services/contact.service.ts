@@ -21,6 +21,7 @@ export class ContactService {
         return obsContactResponse;
     }
     public fetchContact(phone: number): Observable<ContactResponse> {
+        console.log(phone)
         return <Observable<ContactResponse>>this.http.get(`${this.contactServiceURL}/${phone}`);
     }
     public addContact(contact: Contact): Observable<ContactResponse> {
