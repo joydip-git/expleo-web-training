@@ -21,10 +21,10 @@ import { FilterContactComponent } from "./components/filter-contact/filter-conta
     imports: [BrowserModule, FormsModule, ContactRoutesModule, HttpClientModule],
 
     //only service
-    providers: [ContactService]
+    providers: [ContactService],
 
     //name of pipes/components/directives and modules
-    // exports: [ContactListComponent, AddContactComponent,]
+    exports: [ContactListComponent, AddContactComponent, FilterContactComponent]
 })
 export class ContactsModule {
 

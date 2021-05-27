@@ -12,6 +12,7 @@ How to pass data from one component to another?
 	Route (object)
 	Routes	=> collection of Routes (object)
 
+	ActivatedRouteSnapshot (readonly version of ActivatedRoute)
 	ActivatedRoute (service)
 	RouterState: collection of ActivatedRoutes (service)
 	Router=> router engine (service)
@@ -25,6 +26,94 @@ How to pass data from one component to another?
 	navigation information3 : ActivatedRoute
 	navigation information4 : ActivatedRoute
 	navigation information5 : ActivatedRoute
+
+	@component, @pipe, @NgModule, @Input @Output @Injectable
+
+
+	file data:
+	database????
+	SQL Databases 
+		a. relational
+		b. predefined schema
+		c. SQL
+		d. table-based
+		e. multi-row
+	NoSql Databases	
+		a. non-relational
+		b. no fixed schema
+		c. no separate language
+		d. document, key-value, grpah, wide-column stores
+		e. good for unstructured data like documents or JSON
+
+	MongoDB, BigTable, Redis, RavenDB, Casandra, HBase, Neo5j and CouchDB and many more
+
+	{
+		"name":"anil",
+		"subjects":[
+			{
+				"name:""
+			}
+		]
+	}
+
+	{
+		objectid:....
+		"id":1,
+		"name":"anil,
+		"offer":"abcd1234"
+	},
+	{
+		"name":"sunil",		
+	}
+
+	Database -> collection -> Document -> Field > Embded Documents
+
+	mysqld  --> mongod
+	mysql	--> mongo
+
+	MongoDB Service
+	"C:\Program Files\MongoDB\Server\4.4\bin\mongod.exe"
+	 mongodb://127.0.0.1:27017/
+
+	string
+	Integer
+	Boolean
+	Double
+	Arrays
+	Timestamp
+	Object
+	Null
+	Symbol
+	Date
+	Object ID
+	Binary Data
+	Code
+	Regular Expression
+
+
+	$gt
+	$and
+	$or
+	$not :[{name:'anil'},{'email':'anil@gmail.com}] =>(NOR)
+	db.createCollection("contacts")	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

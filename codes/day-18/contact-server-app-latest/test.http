@@ -2,19 +2,19 @@
 GET http://localhost:4001/contactservice/
 
 ###
-GET http://localhost:4001/contactservice/9090909091
+GET http://localhost:4001/contactservice/9090909094
 
 ###
-DELETE http://localhost:4001/contactservice/9090909090
+DELETE http://localhost:4001/contactservice/9090909093
 
 ###
 POST http://localhost:4001/contactservice
 Content-Type: application/json
 
 {
-        "phone": 9090909090,
-        "name": "test",
-        "email": "TEST@GMAIL.COM"
+        "phone": 9090909093,
+        "name": "joydip",
+        "email": "JOYDIP@GMAIL.COM"
 }
 
 ###
@@ -22,7 +22,7 @@ PUT http://localhost:4001/contactservice
 Content-Type: application/json
 
 {
-        "phone": 9090909090,
-        "name": "satarupa",
-        "email": "SATARUPA@GMAIL.COM"
+        "phone": 9090909094,
+        "name": "ramnath nishad",
+        "email": "RAMNATH@GMAIL.COM"
 }

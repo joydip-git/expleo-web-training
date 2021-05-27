@@ -1,152 +1,95 @@
-const fs = require('fs')
-//service file/app: is a collection of operations/services
+const { contactModel } = require('../models/contact')
+
 const getContacts = () => {
-    //read all records from file and ??
     return new Promise((resolve, reject) => {
-        fs.readFile('./data/contacts.json', (err, data) => {
-            if (err) {
-                reject(err)
-                return;
-            }
-            resolve(JSON.parse(data));
+        contactModel.find((err, res) => {
+            if (err)
+                reject('no records found')
+            if (res)
+                resolve(res)
         })
     })
 }
 
 const getContactByPhone = (phone) => {
-    console.log(phone)
-    //read a particular product record from file and ???
     return new Promise(
         (resolve, reject) => {
-            fs.readFile(
-                './data/contacts.json',
-                (err, data) => {
-                    if (err) {
-                        reject(err)
-                        return;
-                    }
-
-                    let contacts = JSON.parse(data)
-                    if (contacts.length == 0) {
-                        reject('no records present')
-                        return;
-                    }
-
-                    let found = contacts.find(p => p.phone === phone);
-                    console.log(found)
-                    if (!found) {
-                        reject('no such record exists')
-                        return;
-                    }
-                    resolve(found)
-                })
+            contactModel.findOne({ phone: phone }, (err, res) => {
+                if (err)
+                    reject('no record found')
+                if (res)
+                    resolve(res)
+            })
         })
 }
 
 const addContact = (contact) => {
-    //adds a product record into file and ??
     return new Promise((resolve, reject) => {
-        fs.readFile('./data/contacts.json', (err, data) => {
-            if (err) {
-                reject(err)
+        contactModel.findOne({ phone: contact.phone }, (error, res) => {
+            if (error) {
+                reject(error)
+                return;
             }
-            else {
-                let contacts = JSON.parse(data);
-                if (contacts.length == 0) {
-                    contacts.push(contact)
-                    fs.writeFile(
-                        './data/contacts.json',
-                        JSON.stringify(contacts),
-                        () => {
-                            resolve('added successfully')
-                        })
-
-                } else {
-                    let found = contacts.find(p => p.phone === contact.phone)
-                    if (found) {
-                        reject('product already exists')
-                    } else {
-                        contacts.push(contact);
-                        fs.writeFile(
-                            './data/contacts.json',
-                            JSON.stringify(contacts),
-                            () => {
-                                resolve(contact)
-                            })
-                    }
+            if (!!res) {
+                reject('record already exists')
+                return;
+            }
+            const newContact = new contactModel(contact)
+            newContact.save((error, res) => {
+                if (error) {
+                    reject(error)
+                    return;
                 }
-            }
+                resolve(res)
+            })
         })
     })
 }
 
 const updateContact = (contact) => {
     return new Promise((resolve, reject) => {
-        fs.readFile('./data/contacts.json', (err, data) => {
-            if (err) {
-                reject(err)
+        contactModel.findOne({ phone: contact.phone }, (error, res) => {
+            if (error) {
+                reject(error)
                 return;
             }
-
-            if (data) {
-                let contacts = JSON.parse(data)
-
-                if (contacts.length == 0) {
-                    reject('no records at all in the file')
-                }
-                else {
-                    let index = contacts.findIndex((p) => p.phone === contact.phone)
-                    if (index == -1) {
-                        reject('no such contact found')
-                    } else {
-                        contacts.splice(index, 1, contact);
-                        fs.writeFile(
-                            './data/contacts.json',
-                            JSON.stringify(contacts),
-                            () => {
-                                resolve(contact)
-                            })
+            if (!!res) {
+                contactModel.replaceOne({ phone: contact.phone }, contact, {}, (error, res) => {
+                    if (error) {
+                        reject(error)
+                        return;
                     }
-                }
+                    resolve(res)
+                })
+                return;
             }
+            reject('no such record exists')
         })
     })
 }
 
 const deleteContact = (phone) => {
-    //deletes a product record from file given the id of the product
     return new Promise((resolve, reject) => {
-        fs.readFile('./data/contacts.json', (err, data) => {
-            if (err) {
-                reject(err)
+        contactModel.findOne({ phone: phone }, (error, res) => {
+            if (error) {
+                reject(error)
                 return;
             }
-
-            if (data) {
-                let contacts = JSON.parse(data)
-
-                if (contacts.length == 0) {
-                    reject('no records at all in the file')
-                }
-                else {
-                    let index = contacts.findIndex((p) => p.phone === phone)
-                    let found = contacts.find((p) => p.phone === phone)
-                    if (index == -1) {
-                        reject('no such contact found')
-                    } else {
-                        contacts.splice(index, 1);
-                        fs.writeFile(
-                            './data/contacts.json',
-                            JSON.stringify(contacts),
-                            () => {
-                                resolve(found)
-                            })
+            if (!!res) {
+                contactModel.deleteOne({ phone: phone }, (error, res) => {
+                    if (error) {
+                        reject(error)
+                        return;
                     }
-                }
+                    resolve(res)
+                })
+                return;
             }
+            reject('no such record exists')
         })
     })
 }
+
 module.exports = {
     getContactByPhone,
     getContacts,

@@ -1,1 +1,32 @@
-[{"name":"sunil kumar","email":"SUNIL@GMAIL.COM","phone":9090909092},{"phone":9090909093,"name":"joydip","email":"JOYDIP@GMAIL.COM"},{"phone":9090909094,"name":"ramnath","email":"RAM@GMAIL.COM"},{"name":"phaniraj","email":"PHANIRAJ@GMAIL.COM","phone":9090909095},{"phone":9090909091,"name":"anil","email":"ANIL@GMAIL.COM"},{"phone":9090909090,"name":"satarupa","email":"SATARUPA@GMAIL.COM"},{"name":"Test","email":"TEST@GMAIL.COM","phone":9090909096}]
+[
+    {
+        "name": "sunil kumar",
+        "email": "SUNIL@GMAIL.COM",
+        "phone": 9090909092
+    },
+    {
+        "phone": 9090909093,
+        "name": "joydip",
+        "email": "JOYDIP@GMAIL.COM"
+    },
+    {
+        "phone": 9090909094,
+        "name": "ramnath",
+        "email": "RAM@GMAIL.COM"
+    },
+    {
+        "name": "phaniraj",
+        "email": "PHANIRAJ@GMAIL.COM",
+        "phone": 9090909095
+    },
+    {
+        "phone": 9090909091,
+        "name": "anil",
+        "email": "ANIL@GMAIL.COM"
+    },
+    {
+        "phone": 9090909090,
+        "name": "satarupa",
+        "email": "SATARUPA@GMAIL.COM"
+    }
+]
