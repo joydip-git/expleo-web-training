@@ -98,6 +98,9 @@ How to pass data from one component to another?
 	db.createCollection("contacts")	
 
 
+	
+
+
 
 
 
