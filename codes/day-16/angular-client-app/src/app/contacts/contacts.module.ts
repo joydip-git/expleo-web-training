@@ -10,11 +10,12 @@ import { UpdateContactComponent } from "./components/update-contact/update-conta
 import { ContactService } from "./services/contact.service";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
+import { FilterContactComponent } from "./components/filter-contact/filter-contact.component";
 
 
 @NgModule({
     //component, pipe, directives
-    declarations: [ContactListComponent, AddContactComponent, ContactsPipe, ContactDetailComponent, UpdateContactComponent],
+    declarations: [ContactListComponent, AddContactComponent, ContactsPipe, ContactDetailComponent, UpdateContactComponent, FilterContactComponent],
 
     //moule names
     imports: [BrowserModule, FormsModule, ContactRoutesModule, HttpClientModule],

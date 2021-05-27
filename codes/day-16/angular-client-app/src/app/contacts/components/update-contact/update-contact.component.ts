@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 //import { map } from 'rxjs/operators'
 import { Contact } from '../../models/contact.model';
@@ -9,12 +9,14 @@ import { ContactService } from '../../services/contact.service';
     templateUrl: './update-contact.component.html'
 })
 
-export class UpdateContactComponent {
+export class UpdateContactComponent implements OnInit {
     contact: any;
-    constructor(private serviceRef: ContactService, private route: ActivatedRoute) {
+    constructor(private serviceRef: ContactService, private route: ActivatedRoute, private router: Router) {
 
-        // let allParams = this.route.params;
-        // console.log(allParams['phone'])
+    }
+
+    ngOnInit() {
+
         let allParamsObs: Observable<Params> = this.route.params;
         allParamsObs.subscribe(
             params => {
@@ -33,12 +35,15 @@ export class UpdateContactComponent {
         //     ).subscribe(r => console.log(r))
 
     }
-
     submitContact(formData: Contact) {
-        console.log(formData)
+        // console.log(formData)
         this.serviceRef.updateConatct(formData)
             .subscribe(
-                resp => console.log(resp),
-                e => console.log(e))
+                resp => window.alert(resp.message),
+                e => console.log(e),
+                () => {
+                    this.router.navigate(['/contacts/show'])
+                }
+            )
     }
 }

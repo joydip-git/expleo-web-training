@@ -1,11 +1,7 @@
 <div class="row">
-    <div class="col-md-2">
-        Filter By:
-    </div>
-    <div class="col-md-4">
-        <input type="text" [(ngModel)]='filterText'>
-        <!-- <input type="text" [value]='filterText' #valtxt (change)="fn(valtxt.value)"> -->
-    </div>
+    <app-filter-contact [inputFilterText]='parentFilterText' (filterTextChanged)='onfilterTextChanged($event)'>
+
+    </app-filter-contact>
 </div>
 <!--
 <br>
@@ -14,7 +10,7 @@
 </span> 
 <br>
 -->
-<div class="table-responsive" style="width: 400px;margin: 100px;">
+<div class="table-responsive" style="width: 500px;margin: 100px;">
     <table class="table" *ngIf="contactRecords && contactRecords.length>0; else alternate">
         <thead style="background-color: burlywood;">
             <tr>
@@ -25,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let contact of contactRecords|contactfilter:filterText">
+            <tr *ngFor="let contact of contactRecords|contactfilter:parentFilterText">
                 <td>
                     <div [routerLink]="['/contacts/show',contact.phone]" style="color: blue;cursor: pointer;"
                         routerLinkActive='active'>
@@ -55,3 +51,5 @@
         </div>
     </ng-template>
 </div>
+
+<!-- <button (click)='changeText()'>Change Text</button> -->

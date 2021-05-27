@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Contact, ContactResponse } from '../../models/contact.model';
 import { ContactService } from '../../services/contact.service';
 
@@ -6,16 +7,24 @@ import { ContactService } from '../../services/contact.service';
     templateUrl: './contact-list.component.html'
 })
 
-export class ContactListComponent {
+export class ContactListComponent implements OnInit, OnDestroy {
 
     contactRecords: Contact[] = [];
-    filterText = ''
-
+    parentFilterText = ''
+    contactSubscription: any;
     constructor(private serviceRef: ContactService) {
-        console.log(this.serviceRef)
-        this.loadData()
     }
-
+    onfilterTextChanged(filterText: string) {
+        console.log(filterText)
+        this.parentFilterText = filterText;
+    }
+    // changeText() {
+    //     this.parentFilterText = 'ph'
+    // }
+    //X-->OnX -->ngOnX
+    ngOnInit() {
+        this.loadData();
+    }
     deleteRecord(phone: any) {
         this.serviceRef.deleteContact(phone)
             .subscribe(
@@ -27,10 +36,14 @@ export class ContactListComponent {
     }
 
     loadData() {
-        this.serviceRef.fetchContacts()
+        this.contactSubscription = this.serviceRef.fetchContacts()
             .subscribe(
                 (cs: ContactResponse) => this.contactRecords = cs.data,
                 (e) => console.log(e)
             )
+    }
+    ngOnDestroy() {
+        // console.log(this.contactSubscription)
+        this.contactSubscription.unsubscribe()
     }
 }
