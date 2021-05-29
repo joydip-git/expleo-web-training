@@ -1,0 +1,133 @@
+
+Piping mechanism: transformation of data
+	a. convert data to lowercase
+	b. convert data to uppercase
+	c. display price with currency symbol
+	d. display price with only two decimal places
+	e. filter the records
+	f. sort the records
+
+Pipe:
+	a. lowercase
+	b. uppercase
+	c. currency
+	d. currency
+	e. custom pipe
+	f. custom pipe
+	g. async
+
+syntax of pipe usage:
+	data|<pipe-name>:<add-arg1>:<add-arg2>
+	data|apipe
+	{{12.3456|currency:'USD':'symbol':'1.2-2'}}
+
+what's a pipe?
+	
+	import { PipeTransform, Pipe } from '@angular/core'
+
+	@Pipe({name:'contactfilter'})
+	export class APipe implements PipeTransform {
+		transform(arg:any, ..args:any[]):any{
+			return <trans-data>;
+		}
+	}
+
+	let filterText = 'a'
+	data|contactfilter:filterText
+
+	interface PipeTransform{
+		transform(arg:any, ..args:any[]):any; //declaration --> abstract method
+	}
+
+	interface IPerson{
+		Cut():void;
+	}
+	class HairStylist implements IPerson{
+		Cut():void {
+		}
+	} --> 	Cut(){}
+	class Butcher{}     --> 	Cut(){}
+	class MovieDirector{}--> 	Cut(){}
+
+	//pure abstract class
+	interface IDataAccess{
+		getData():any[];
+	}
+
+	class XmlFileAccess implements IDataAccess{
+		getData():any[]{
+		}
+	}
+
+	class TextFileAccess implements IDataAccess{
+		getData():any[]{
+		}
+	}
+
+	class JsonFileAccess implements IDataAccess{
+		getData():any[]{
+		}
+	}
+
+	const dataAccess:IDataAccess = new JsonFileAccess();
+	dataAccess.getData();
+
+	class Person{}
+	class Trainer extends Person{}
+
+	http://localhost:4200
+
+	app routes:[app.routes.ts]
+	/  		--> homecomponent
+	/home		--> homecomponent
+	/*		--> pagenotfoundcomponent
+	
+		
+	contacts module specific routes: [contacts.routes.ts]
+	path			component
+-----------------------------------------------------------------
+	/contacts/show --> contactlistcomponent
+	/contacts/add --> addcontactcomponent
+
+	a. create a routes file --> name.routes.ts
+	b. register those routes with Router engine of RouterModule
+
+	1. route??
+	2. how to configure
+	3. where to display those components??
+
+	Router Module
+	---------------------------------
+	router-outlet: directive (outlet where the component can be loaded through chnage in routes)
+	routerLink: attribute directive (helps you use anchor tag but prevents your page/app from getting reloaded)
+	routerLinkActive: to provide active style to the link (any CSS class that you have can be supplied here)
+	[routerLinkActive]='myStyle'
+
+	Route: object -- represents a route
+	Routes: an array (Route[] --> represents a collection of routes)
+
+	Router (service)
+
+	1. create other product components
+	 update-product, product-detail
+
+	2. create app components
+	home, pagenotfound and dashboard
+
+	3. create two sets of routes: products and app module
+	4. create two route module files: products and app module
+	5. register the routes with product routes and app routes module files
+	6. register them with corresponding main module files (app.module and products.module)\\
+
+	7. provide navigation
+
+	@Component <-- @Injectable()
+	@Pipe      <-- @Injectable
+
+	Reactive Extensions to JavaScript
+	rxjs<--package
+	
+
+
+
+

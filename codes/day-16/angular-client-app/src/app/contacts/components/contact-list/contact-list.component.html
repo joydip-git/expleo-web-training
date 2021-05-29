@@ -1,0 +1,55 @@
+<div class="row">
+    <app-filter-contact [inputFilterText]='parentFilterText' (filterTextChanged)='onfilterTextChanged($event)'>
+
+    </app-filter-contact>
+</div>
+<!--
+<br>
+ <span style="margin: 10px;">
+    {{12.3456|currency:'USD':'symbol':'1.2-2'}}
+</span> 
+<br>
+-->
+<div class="table-responsive" style="width: 500px;margin: 100px;">
+    <table class="table" *ngIf="contactRecords && contactRecords.length>0; else alternate">
+        <thead style="background-color: burlywood;">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contactRecords|contactfilter:parentFilterText">
+                <td>
+                    <div [routerLink]="['/contacts/show',contact.phone]" style="color: blue;cursor: pointer;"
+                        routerLinkActive='active'>
+                        <!-- /contacts/show/<phone>-->
+                        <u>{{contact.name|uppercase}}</u>
+                    </div>
+                </td>
+                <td>{{contact.email|lowercase}}</td>
+                <td>
+                    <div [routerLink]="['/contacts/update',contact.phone]" style="color: blue;cursor: pointer;"
+                        routerLinkActive='active'>
+                        <!-- /contacts/update/<phone>-->
+                        <u>{{contact.phone}}</u>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)='deleteRecord(contact.phone)'>
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #alternate>
+        <div>
+            no records to display
+        </div>
+    </ng-template>
+</div>
+
+<!-- <button (click)='changeText()'>Change Text</button> -->

@@ -1,0 +1,65 @@
+<div class="panel panel-primary">
+
+    <div class="panel panel-heading">
+        <h2>
+            {{ title }}
+        </h2>
+    </div>
+
+    <app-dashboard>
+    </app-dashboard>
+
+    <div class="panel panel-body">
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- 
+    <input type="text" #titleRef (change)="changeHeaderValue(titleRef.value)" [value]='title'>
+    <input type="text" [(ngModel)]='title'>
+
+<br>
+
+<input type="button" class="btn btn-danger" (click)="changeHeaderValue(titleRef.value)" value="Change Header"> 
+
+<br>
+
+<img src="{{imgPath}}" alt="NA" [style.width.px]="imgWidth" [style.margin.px]="imgMargin"> 
+<img src="{{imgPath}}" alt="NA" [ngStyle]="{'width':imgWidth+'px','margin':imgMargin+'px'}">
+<br>
+<img src="{{imgPath}}" alt="NA" [ngClass]="{'myStyle':applyStyle}">
+<br>
+
+<ul>
+    <li *ngFor="let num of numbers">
+        {{ num }}
+    </li>
+</ul>
+
+<br>
+
+<div class="container">
+    <select name="" id="" class="dropdown" style="border:1px solid black;border-radius: 5px;">
+        <option selected disabled>--select--</option>
+        <option *ngFor="let name of names">
+            {{name}}
+        </option>
+    </select>
+</div>
+<br> 
+
+<app-add-contact>
+</app-add-contact>
+
+<br>
+
+<app-contacts>
+</app-contacts>
+ -->

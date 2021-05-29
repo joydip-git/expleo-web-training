@@ -1,0 +1,56 @@
+<div class="panel panel-primary">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="col-md-2">
+                Filter By:
+            </div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="filterText" />
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table" *ngIf="products && products.length">
+                <thead style="background-color: burlywood">
+                    <tr>
+                        <th>
+                            Image
+                        </th>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products|productfilter:filterText">
+                        <td>
+                            <div class="img-responsive">
+                                <img [src]="product.imageUrl" alt="" [title]="product.productName"
+                                    [ngStyle]="{'margin':applyStyle===true?'2px':'0px'} && {'width':applyStyle===true?'50px':'0px'}"
+                                    [routerLink]="['/product',product.productId]" style="cursor: pointer;">
+                            </div>
+                        </td>
+                        <td>
+                            <div [routerLink]="['/product',product.productId]" style="color: blue;cursor: pointer;">
+                                <u>{{ product.productName }}</u>
+                            </div>
+                        </td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>
+                            {{ product.price }}</td>
+
+                        <td>{{ product.starRating }}</td>
+                        <td>
+                            <button class="btn btn-danger">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
