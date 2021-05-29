@@ -48,25 +48,5 @@
         "price": 35.95,
         "starRating": 4,
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-    },
-    {
-        "productId": 100,
-        "productName": "abcd",
-        "productCode": "gdn-097",
-        "releaseDate": "2021-05-17",
-        "description": "new product",
-        "price": 1234,
-        "starRating": 4,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-    },
-    {
-        "productId": 101,
-        "productName": "dell xps",
-        "productCode": "dell-1234",
-        "releaseDate": "2021-05-17",
-        "description": "new laptop from dell",
-        "price": 67000,
-        "starRating": 4,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
     }
 ]
