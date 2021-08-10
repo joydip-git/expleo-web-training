@@ -1,7 +1,7 @@
-const { Router } = require('express');
+const router = require('express').Router();
 const { getContactsHandler, geContactByPhoneHandler, addContactHandler, deleteContactHandler, updateContactHandler } = require('../controller/contactController');
 
-const router = Router();
+//const router = Router();
 const objectUri = '/contactservice'
 
 router
